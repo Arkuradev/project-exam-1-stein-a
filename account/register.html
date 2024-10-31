@@ -11,7 +11,6 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="/css/style.css" />
-    <link rel="stylesheet" href="css/blogFeed.css" />
     <link rel="stylesheet" href="/media/navbar-footer.css" />
 
     <title>GamerBlog | Home</title>
@@ -70,22 +69,41 @@
   </header>
   <body>
     <h1>REGISTER A NEW ACCOUNT</h1>
-  </body>
 
-  <footer>
-    <img
-      src="/images/darkfooterlogo.jpg"
-      alt="GamerBlog Logo on dark background"
-      class="darkLogo"
-    />
-    <ul>
-      <li><a href="#">Home</a></li>
-      <li><a href="#">Blog</a></li>
-      <li><a href="#">About</a></li>
-      <li><a href="#">Login</a></li>
-    </ul>
-    <p class="footerP">Copyright &copy; 2024 GamerBlog</p>
-  </footer>
-  <script src="/js/sideNav.js"></script>
-  <script src="/js/fetchData.mjs" type="module"></script>
+    <form id="registerForm">
+      <label for="username">Username:</label>
+      <input name="username" id="name" type="text" placeholder="Username" />
+
+      <label for="email">Email:</label>
+      <input name="email" id="email" type="email" placeholder="Email" />
+
+      <label for="password">Password:</label>
+      <input
+        name="password"
+        id="password"
+        type="password"
+        placeholder="Password"
+      />
+
+      <button type="submit">Register</button>
+    </form>
+
+    <footer>
+      <img
+        src="/images/darkfooterlogo.jpg"
+        alt="GamerBlog Logo on dark background"
+        class="darkLogo"
+      />
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Login</a></li>
+      </ul>
+      <p class="footerP">Copyright &copy; 2024 GamerBlog</p>
+    </footer>
+    <script src="/js/sideNav.js"></script>
+    <script src="/js/register.mjs" type="module"></script>
+    <script src="/js/user-registration.mjs" type="module"></script>
+  </body>
 </html>
