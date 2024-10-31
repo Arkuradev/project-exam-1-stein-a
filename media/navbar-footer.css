@@ -1,0 +1,29 @@
+/* NAVBAR MEDIA QUERIES */
+
+@media (max-width: 800px) {
+  .hideOnMobile {
+    display: none;
+  }
+  .hamburger-button {
+    display: block;
+  }
+}
+
+@media (max-width: 400px) {
+  .sideNav {
+    width: 100%;
+  }
+}
+
+/* FOOTER MEDIA QUERIES */
+
+@media (max-width: 500px) {
+  .darkLogo {
+    width: 220px;
+    height: auto;
+  }
+  footer ul {
+    flex-direction: column;
+    padding-bottom: 10px;
+  }
+}
