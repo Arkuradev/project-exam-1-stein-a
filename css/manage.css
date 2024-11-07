@@ -1,0 +1,22 @@
+#editPostForm {
+  display: none;
+}
+
+#postTable {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+thead {
+  padding-bottom: 20px;
+}
+
+#adminPanel {
+  margin: 0 auto;
+  max-width: 500px;
+  padding: 20px;
+  margin-top: 100px;
+  height: auto;
+  width: auto;
+}

@@ -18,7 +18,7 @@ export async function loginUser(email, password) {
       const data = await response.json();
       const accessToken = data.data?.accessToken;
 
-      console.log("Token received:", accessToken);
+      // console.log("Token received:", accessToken);
       return accessToken;
     } else {
       console.log("Login failed:", response.statusText);

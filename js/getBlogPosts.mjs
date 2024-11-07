@@ -15,7 +15,7 @@ export async function getBlogPosts(token, name) {
 
     if (response.ok) {
       const data = await response.json();
-      console.log("Blog posts retrieved:", data);
+
       return data;
     } else {
       console.log("Failed to retrieve blog posts:", response.statusText);

@@ -81,12 +81,12 @@ footer {
   color: var(--background-color);
   text-align: center;
   width: 100%;
-  height: auto;
+  height: 350px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  position: fixed;
+  position: absolute;
   left: 0;
   bottom: 0;
 }

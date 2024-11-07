@@ -10,12 +10,13 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Orbitron:wght@400..900&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/blogFeed.css" />
-    <link rel="stylesheet" href="media/navbar-footer.css" />
-    <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/blogFeed.css" />
+    <link rel="stylesheet" href="/media/navbar-footer.css" />
+    <link rel="stylesheet" href="/css/index.css" />
+    <link rel="stylesheet" href="/css/manage.css" />
 
-    <title>GamerBlog | Home</title>
+    <title>GamerBlog | Manage Blog</title>
   </head>
   <header>
     <nav>
@@ -43,7 +44,7 @@
         <li>
           <a href="./index.html" class="nav-logo-link"
             ><img
-              src="./images/Lightlogo.jpg"
+              src="/images/Lightlogo.jpg"
               class="lightLogo"
               alt="GamerBlog Logo on white background"
           /></a>
@@ -70,31 +71,42 @@
     </nav>
   </header>
   <body>
-    <div class="page-container">
-      <h1>GamerBlog Feed</h1>
-
-      Welcome to GamerBlog - A blog packed with gaming goodies Showcases cool
-      gaming news and advanced tips and tricks. Rendering blog posts here
-      <div class="blogFeed-container"></div>
+    <h2>Manage Blog</h2>
+    <div id="adminPanel">
+      <table id="postsTable">
+        <thead>
+          <tr>
+            <th>Title</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
     </div>
-    <div id="blogPostsContainer"></div>
 
-    <footer>
-      <img
-        src="./images/darkfooterlogo.jpg"
-        alt="GamerBlog Logo on dark background"
-        class="darkLogo"
-      />
-      <ul>
-        <li><a href="./index.html">Home</a></li>
-        <li><a href="./blog/index.html">Blog</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="./account/login.html">Login</a></li>
-      </ul>
-      <p class="footerP">Copyright &copy; 2024 GamerBlog</p>
-    </footer>
+    <div id="editPostForm">
+      <h3>Edit Post</h3>
+      <input type="text" id="editTitle" placeholder="Title" />
+      <textarea id="editBody" placeholder="Content"></textarea>
+      <button onclick="saveEdit()">Save</button>
+      <button onclick="cancelEdit()">Cancel</button>
+    </div>
+    <div class="spacer">.</div>
   </body>
-  <script src="./js/sideNav.js"></script>
-  <script src="/js/renderPosts.mjs" type="module"></script>
-  <script src="/js/getBlogPosts.mjs" type="module"></script>
+  <footer>
+    <img
+      src="/images/darkfooterlogo.jpg"
+      alt="GamerBlog Logo on dark background"
+      class="darkLogo"
+    />
+    <ul>
+      <li><a href="./index.html">Home</a></li>
+      <li><a href="./blog/index.html">Blog</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="./account/login.html">Login</a></li>
+    </ul>
+    <p class="footerP">Copyright &copy; 2024 GamerBlog</p>
+  </footer>
+
+  <script src="/js/renderAdminPanel.mjs" type="module"></script>
 </html>

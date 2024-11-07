@@ -9,6 +9,10 @@
   color: black;
 }
 
+body {
+  height: 100vh;
+}
+
 h2 {
   margin-bottom: 10px;
 }

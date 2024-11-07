@@ -39,7 +39,7 @@ async function createBlogPost(token, name, title, body) {
     await createBlogPost(
       token,
       name,
-      "My new blog post",
+      "Test post title",
       "This is my new blog post."
     );
   }
