@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/blogFeed.css" />
     <link rel="stylesheet" href="media/navbar-footer.css" />
+    <link rel="stylesheet" href="css/index.css" />
 
     <title>GamerBlog | Home</title>
   </head>
@@ -75,23 +76,25 @@
       Welcome to GamerBlog - A blog packed with gaming goodies Showcases cool
       gaming news and advanced tips and tricks. Rendering blog posts here
       <div class="blogFeed-container"></div>
-
-      <footer>
-        <img
-          src="./images/darkfooterlogo.jpg"
-          alt="GamerBlog Logo on dark background"
-          class="darkLogo"
-        />
-        <ul>
-          <li><a href="./index.html">Home</a></li>
-          <li><a href="#">Blog</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="./account/login.html">Login</a></li>
-        </ul>
-        <p class="footerP">Copyright &copy; 2024 GamerBlog</p>
-      </footer>
     </div>
+    <div id="blogPostsContainer"></div>
+
+    <footer>
+      <img
+        src="./images/darkfooterlogo.jpg"
+        alt="GamerBlog Logo on dark background"
+        class="darkLogo"
+      />
+      <ul>
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="./account/login.html">Login</a></li>
+      </ul>
+      <p class="footerP">Copyright &copy; 2024 GamerBlog</p>
+    </footer>
   </body>
   <script src="./js/sideNav.js"></script>
-  <script src="./js/fetchData.mjs" type="module"></script>
+  <script src="/js/renderPosts.mjs" type="module"></script>
+  <script src="/js/getBlogPosts.mjs" type="module"></script>
 </html>

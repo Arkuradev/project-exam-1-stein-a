@@ -12,6 +12,7 @@
     />
     <link rel="stylesheet" href="../css/style.css" />
     <link rel="stylesheet" href="../media/navbar-footer.css" />
+    <link rel="stylesheet" href="../css/form-styling.css" />
 
     <title>GamerBlog | Home</title>
   </head>
@@ -71,10 +72,25 @@
     <div class="page-container">
       <h1>LOGIN OR CREATE AN ACCOUNT</h1>
 
-      <form class="form">
-        <input name="username" type="text" placeholder="Username" />
-        <input name="password" type="password" placeholder="Password" />
+      <form id="loginForm">
+        <label for="name">Name:</label>
+        <input name="name" id="name" type="text" placeholder="Name" />
+        <label for="email">Email:</label>
+        <input
+          name="email"
+          id="email"
+          type="email"
+          placeholder="@stud.noroff.no"
+        />
+        <label for="password">Password:</label>
+        <input
+          name="password"
+          id="password"
+          type="password"
+          placeholder="Password"
+        />
         <button type="submit">Login</button>
+        <a class="registerLink" href="../account/register.html">Register</a>
       </form>
 
       <footer>
@@ -94,7 +110,6 @@
     </div>
 
     <script src="../js/sideNav.js"></script>
-    <script src="../js/fetchData.mjs" type="module"></script>
     <script src="../js/login.mjs" type="module"></script>
   </body>
 </html>

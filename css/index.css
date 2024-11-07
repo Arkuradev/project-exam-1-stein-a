@@ -1,0 +1,17 @@
+#blogPostsContainer {
+  width: 500px;
+  height: 1000px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 100px;
+  background-color: teal;
+  color: black;
+}
+
+h2 {
+  margin-bottom: 10px;
+}
+p {
+  padding: 20px;
+}

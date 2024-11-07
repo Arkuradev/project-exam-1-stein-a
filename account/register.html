@@ -12,6 +12,7 @@
     />
     <link rel="stylesheet" href="/css/style.css" />
     <link rel="stylesheet" href="/media/navbar-footer.css" />
+    <link rel="stylesheet" href="/css/form-styling.css" />
 
     <title>GamerBlog | Home</title>
   </head>
@@ -46,10 +47,10 @@
               alt="GamerBlog Logo on white background"
           /></a>
         </li>
-        <li><a href="#" class="hideOnMobile">Home</a></li>
+        <li><a href="/index.html" class="hideOnMobile">Home</a></li>
         <li><a href="#" class="hideOnMobile">Blog</a></li>
         <li><a href="#" class="hideOnMobile">About</a></li>
-        <li><a href="#" class="hideOnMobile">Login</a></li>
+        <li><a href="/account/login.html" class="hideOnMobile">Login</a></li>
         <li class="hamburger-button" onclick="showSideNav()">
           <a href="#"
             ><svg
@@ -71,11 +72,16 @@
     <h1>REGISTER A NEW ACCOUNT</h1>
 
     <form id="registerForm">
-      <label for="username">Username:</label>
-      <input name="username" id="name" type="text" placeholder="Username" />
+      <label for="name">Name:</label>
+      <input name="name" id="name" type="text" placeholder="Name" />
 
       <label for="email">Email:</label>
-      <input name="email" id="email" type="email" placeholder="Email" />
+      <input
+        name="email"
+        id="email"
+        type="email"
+        placeholder="@stud.noroff.no"
+      />
 
       <label for="password">Password:</label>
       <input
