@@ -11,9 +11,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="/css/style.css" />
-    <link rel="stylesheet" href="/css/blogFeed.css" />
     <link rel="stylesheet" href="/media/navbar-footer.css" />
-    <link rel="stylesheet" href="/css/index.css" />
     <link rel="stylesheet" href="/css/manage.css" />
 
     <title>GamerBlog | Manage Blog</title>
@@ -35,14 +33,14 @@
               /></svg
           ></a>
         </li>
-        <li><a href="#">Home</a></li>
+        <li><a href="../index.html">Home</a></li>
         <li><a href="#">Blog</a></li>
         <li><a href="#">About</a></li>
         <li><a href="./account/login.html">Login</a></li>
       </ul>
       <ul>
         <li>
-          <a href="./index.html" class="nav-logo-link"
+          <a href="../index.html" class="nav-logo-link"
             ><img
               src="/images/Lightlogo.jpg"
               class="lightLogo"
@@ -52,7 +50,11 @@
         <li><a href="/index.html" class="hideOnMobile">Home</a></li>
         <li><a href="/post/index.html" class="hideOnMobile">Blog</a></li>
         <li><a href="about.html" class="hideOnMobile">About</a></li>
-        <li><a href="./account/login.html" class="hideOnMobile">Login</a></li>
+        <li>
+          <a href="./account/login.html" class="hideOnMobile login-link"
+            >Login</a
+          >
+        </li>
         <li class="hamburger-button" onclick="showSideNav()">
           <a href="#"
             ><svg
@@ -71,42 +73,46 @@
     </nav>
   </header>
   <body>
-    <h2>Manage Blog</h2>
-    <div id="adminPanel">
-      <table id="postsTable">
-        <thead>
-          <tr>
-            <th>Title</th>
-            <th>Actions</th>
-          </tr>
-        </thead>
-        <tbody></tbody>
-      </table>
+    <div id="page-container">
+      <div id="content-wrap">
+        <div id="adminPanel">
+          <h2>Manage Blog</h2>
+          <button onclick="createPost()">Create Post</button>
+          <table id="postsTable">
+            <thead>
+              <tr>
+                <th>Title</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+        <div id="editPostForm">
+          <h3>Edit Post</h3>
+          <input type="text" id="editTitle" placeholder="Title" />
+          <textarea id="editBody" placeholder="Content"></textarea>
+          <button onclick="saveEdit()">Save</button>
+          <button onclick="cancelEdit()">Cancel</button>
+        </div>
+      </div>
+      <footer id="footer">
+        <img
+          src="/images/darkfooterlogo.jpg"
+          alt="GamerBlog Logo on dark background"
+          class="darkLogo"
+        />
+        <ul>
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="./blog/index.html">Blog</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="./account/login.html">Login</a></li>
+        </ul>
+        <p class="footerP">Copyright &copy; 2024 GamerBlog</p>
+      </footer>
     </div>
-
-    <div id="editPostForm">
-      <h3>Edit Post</h3>
-      <input type="text" id="editTitle" placeholder="Title" />
-      <textarea id="editBody" placeholder="Content"></textarea>
-      <button onclick="saveEdit()">Save</button>
-      <button onclick="cancelEdit()">Cancel</button>
-    </div>
-    <div class="spacer">.</div>
   </body>
-  <footer>
-    <img
-      src="/images/darkfooterlogo.jpg"
-      alt="GamerBlog Logo on dark background"
-      class="darkLogo"
-    />
-    <ul>
-      <li><a href="./index.html">Home</a></li>
-      <li><a href="./blog/index.html">Blog</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="./account/login.html">Login</a></li>
-    </ul>
-    <p class="footerP">Copyright &copy; 2024 GamerBlog</p>
-  </footer>
 
   <script src="/js/renderAdminPanel.mjs" type="module"></script>
+  <script src="/js/getUserInfo.mjs" type="module"></script>
 </html>

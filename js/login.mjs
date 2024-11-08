@@ -18,7 +18,10 @@ export async function loginUser(email, password) {
       const data = await response.json();
       const accessToken = data.data?.accessToken;
 
-      // console.log("Token received:", accessToken);
+      if (accessToken) {
+        //Store token in localStorage for authentication in other pages
+        localStorage.setItem("authToken", accessToken);
+      }
       return accessToken;
     } else {
       console.log("Login failed:", response.statusText);

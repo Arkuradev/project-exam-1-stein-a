@@ -1,16 +1,6 @@
 #blogPostsContainer {
-  width: 500px;
-  height: 1000px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin-bottom: 100px;
   background-color: teal;
   color: black;
-}
-
-body {
-  height: 100vh;
 }
 
 h2 {

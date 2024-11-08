@@ -51,7 +51,7 @@
         <li><a href="/index.html" class="hideOnMobile">Home</a></li>
         <li><a href="/post/index.html" class="hideOnMobile">Blog</a></li>
         <li><a href="about.html" class="hideOnMobile">About</a></li>
-        <li><a href="./account/login.html" class="hideOnMobile">Login</a></li>
+        <li><a href="./account/login.html" class="hideOnMobile login-link">Login</a></li>
         <li class="hamburger-button" onclick="showSideNav()">
           <a href="#"
             ><svg
@@ -70,15 +70,18 @@
     </nav>
   </header>
   <body>
+    <main>
     <div class="page-container">
       <h1>GamerBlog Feed</h1>
 
       Welcome to GamerBlog - A blog packed with gaming goodies Showcases cool
       gaming news and advanced tips and tricks. Rendering blog posts here
-      <div class="blogFeed-container"></div>
+      <div id="blogPostsContainer"></div>
+      
+        </div>
+      </div>
     </div>
-    <div id="blogPostsContainer"></div>
-
+  </main>
     <footer>
       <img
         src="./images/darkfooterlogo.jpg"
@@ -97,4 +100,5 @@
   <script src="./js/sideNav.js"></script>
   <script src="/js/renderPosts.mjs" type="module"></script>
   <script src="/js/getBlogPosts.mjs" type="module"></script>
+  <script src="/js/getUserInfo.mjs" type="module"></script>
 </html>

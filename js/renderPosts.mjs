@@ -1,6 +1,6 @@
 export function renderBlogPost(posts) {
   const container = document.getElementById("blogPostsContainer");
-  // container.innerHTML = "";
+  container.innerHTML = "";
 
   if (posts && posts.data) {
     posts.data.forEach((post) => {
