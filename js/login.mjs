@@ -30,3 +30,31 @@ export async function loginUser(email, password) {
     console.error("Error logging in:", error);
   }
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+  const loginForm = document.getElementById("loginForm");
+
+  // Check if token exists in localStorage and redirect to manage.html if it does.
+  const token = localStorage.getItem("authToken");
+
+  if (token && window.location.pathname.endsWith("/login.html")) {
+    // Redirect user to manage page if logged in.
+    window.location.href = "./manage.html";
+    return;
+  }
+
+  // Add event listener for login form.
+  loginForm.addEventListener("submit", async (event) => {
+    event.preventDefault(); // Prevent form from submitting normally.
+
+    const email = document.getElementById("email").value;
+    const password = document.getElementById("password").value;
+
+    const accessToken = await loginUser(email, password);
+    if (accessToken) {
+      window.location.href = "./manage.html";
+    } else {
+      alert("Login failed. Please check your email and password.");
+    }
+  });
+});

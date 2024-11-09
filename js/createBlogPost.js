@@ -39,8 +39,8 @@ async function createBlogPost(token, name, title, body) {
     await createBlogPost(
       token,
       name,
-      "Test post title",
-      "This is my new blog post."
+      "My daughter did this",
+      "She won in the game, it was incredible!!!."
     );
   }
 })();
