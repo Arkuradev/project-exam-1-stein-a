@@ -6,6 +6,6 @@ async function logOutUser() {
 }
 
 const logoutButton = document.getElementById("logoutButton");
-logoutButton.addEventListener("click", () => {
-  logOutUser();
-});
+if (logoutButton) {
+  logoutButton.addEventListener("click", logOutUser);
+}
