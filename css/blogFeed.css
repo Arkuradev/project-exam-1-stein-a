@@ -1,0 +1,25 @@
+@import url("variables.css");
+
+#blogPostsContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 50px;
+  padding-bottom: 100px;
+  justify-content: center;
+  color: black;
+}
+.blog-post {
+  max-width: 700px;
+  height: auto;
+}
+
+#blogPostsContainer h2 {
+  margin-bottom: 20px;
+  margin-top: 50px;
+  text-align: center;
+}
+
+#blogPostsContainer hr {
+  border-color: var(--primary-color);
+}
