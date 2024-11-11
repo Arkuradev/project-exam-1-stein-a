@@ -16,6 +16,16 @@ body {
   justify-content: center;
 }
 table {
+  width: 500px;
+}
+
+tr {
+  height: 30px;
+  text-align: center;
+}
+
+tr:nth-child(odd) {
+  background-color: #eb9f62;
 }
 
 tr:nth-child(even) {
@@ -28,7 +38,7 @@ tr:nth-child(even) {
   justify-content: center;
   align-items: center;
 
-  margin-top: 100px;
+  margin-top: 50px;
   margin-bottom: 20px;
 }
 
