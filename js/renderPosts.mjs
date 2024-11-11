@@ -7,7 +7,10 @@ export function renderBlogPost(posts) {
       const postElement = document.createElement("div");
       postElement.classList.add("blog-post");
       postElement.innerHTML = `
+    
+
     <h2>${post.title}</h2>
+    <img src="${post.imageUrl}" alt="${post.title}">
     <p>${post.body}</p>
     
     <hr>
