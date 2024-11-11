@@ -23,7 +23,7 @@ function updateNavbar() {
   if (userName) {
     // If user is logged in update the link.
     loginLink.textContent = userName;
-    loginLink.href = "./account/manage.html";
+    loginLink.href = "/project-exam-1/account/manage.html";
 
     // Makes username link not work if on manage.html due to pathing issues.
     loginLink.addEventListener("click", (event) => {
