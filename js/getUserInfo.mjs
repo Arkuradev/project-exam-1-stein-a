@@ -15,6 +15,7 @@ function getUserInfo() {
   return null;
 }
 
+// Updates the navbar after user has logged in so the user can click on their name and be redirected to manage page.
 function updateNavbar() {
   const userName = getUserInfo();
   const loginLink = document.querySelector(".login-link");
@@ -22,7 +23,7 @@ function updateNavbar() {
   if (userName) {
     // If user is logged in update the link.
     loginLink.textContent = userName;
-    loginLink.href = "./account/manage.html";
+    loginLink.href = "../account/manage.html";
 
     // Makes username link not work if on manage.html due to pathing issues.
     loginLink.addEventListener("click", (event) => {

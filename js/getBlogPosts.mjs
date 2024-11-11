@@ -1,6 +1,5 @@
 import { NoroffAPIKey } from "./constants.mjs";
 import { renderBlogPost } from "./renderPosts.mjs";
-import { loginUser } from "./login.mjs";
 export async function getBlogPosts(token, name) {
   const postUrl = `https://v2.api.noroff.dev/blog/posts/${name}`;
 
@@ -25,11 +24,12 @@ export async function getBlogPosts(token, name) {
   }
 }
 
+//Function to render posts on the Home page for user.
 (async function () {
-  const token = await loginUser("gamerblog@stud.noroff.no", "Annabelle1099"); //Logging in.
-  const name = "steinarild";
+  const token = localStorage.getItem("authToken");
+  const name = localStorage.getItem("name");
 
-  if (token) {
+  if (token && name) {
     const posts = await getBlogPosts(token, name);
     if (posts) {
       renderBlogPost(posts);

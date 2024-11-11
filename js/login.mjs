@@ -17,10 +17,13 @@ export async function loginUser(email, password) {
     if (response.ok) {
       const data = await response.json();
       const accessToken = data.data?.accessToken;
+      const name = data.data?.name;
 
       if (accessToken) {
         //Store token in localStorage for authentication in other pages
         localStorage.setItem("authToken", accessToken);
+        //Store username/author name in localStorage for use on other pages.
+        localStorage.setItem("name", name);
       }
       return accessToken;
     } else {
