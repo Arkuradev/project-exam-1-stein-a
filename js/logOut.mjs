@@ -2,6 +2,7 @@
 
 async function logOutUser() {
   localStorage.removeItem("authToken");
+  localStorage.removeItem("name");
   window.location.href = "./login.html";
 }
 

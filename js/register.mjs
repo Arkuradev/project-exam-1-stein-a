@@ -1,4 +1,4 @@
-// Registration of a user
+// Registration of a user to the API
 import { API_REGISTER_URL } from "./constants.mjs";
 
 export async function register(name, email, password) {
@@ -8,7 +8,7 @@ export async function register(name, email, password) {
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({ name, email, password }),
+      body: JSON.stringify({ name, email, password, venueManager: false }),
     });
 
     const data = await response.json();
@@ -22,3 +22,17 @@ export async function register(name, email, password) {
     console.error("Error:", error);
   }
 }
+
+// Retreiving form data
+
+document
+  .getElementById("registerForm")
+  .addEventListener("submit", async (event) => {
+    event.preventDefault();
+
+    const name = document.getElementById("name").value;
+    const email = document.getElementById("email").value;
+    const password = document.getElementById("password").value;
+
+    await register(name, email, password);
+  });
