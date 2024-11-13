@@ -1,7 +1,7 @@
 const API_REGISTER_URL = "https://v2.api.noroff.dev/auth/register";
 const API_LOGIN_URL = "https://v2.api.noroff.dev/auth/login";
 const API_BLOG_POST_URL = "https://v2.api.noroff.dev/blog/posts";
-const API_BLOG_EDIT_URL = "https://v2.api.noroff.dev/blog/posts/${name}";
+const API_BLOG_EDIT_URL = "https://v2.api.noroff.dev/blog/posts";
 
 const NoroffAPIKey = "00171b21-dfb7-456d-acba-f554a3ec0bd9";
 const token =
