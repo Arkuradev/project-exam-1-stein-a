@@ -7,8 +7,6 @@ window.openEditPage = function (name, postId) {
   const editUrl = `${baseUrl}/post/edit.html?name=${name}&postId=${postId}`;
   window.location.href = editUrl;
 };
-// /editPost.html?postId=${postId}&name=${name}
-// /editPost.html?name=${name}&postId=${postId}
 
 export async function renderAdminPanel(token, name) {
   const posts = await getBlogPosts(token, name);
@@ -44,10 +42,12 @@ export async function renderAdminPanel(token, name) {
 // FIX THIS FUNCTION
 
 (async function () {
-  const token = await loginUser("gamerblog@stud.noroff.no", "Annabelle1099"); //Logging in.
-  const name = "steinarild";
+  const token = localStorage.getItem("authToken");
+  const name = localStorage.getItem("name");
 
   if (token) {
     renderAdminPanel(token, name);
+  } else {
+    console.error("User is not logged in or token is missing.");
   }
 })();
