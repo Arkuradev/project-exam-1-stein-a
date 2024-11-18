@@ -5,15 +5,17 @@ export function renderBlogPost(posts) {
   if (posts && posts.data) {
     posts.data.forEach((post) => {
       const postElement = document.createElement("div");
+      const imageUrl = post.media?.url || ""; // Fallback to an empty string if no URL
+      const imageAlt = post.media?.alt || "No description available"; // Fallback to an empty string if no alt text
       postElement.classList.add("blog-post");
       postElement.innerHTML = `
     
 
     <h2>${post.title}</h2>
     ${
-      post.media
-        ? `<img src="${post.media.url}" id="postImage" alt="${post.media.alt}">`
-        : ""
+      imageUrl
+        ? `<img src="${imageUrl}" id="postImage" alt="${imageAlt}">`
+        : "<p>No image available</p>"
     }
     <p>${post.body}</p>
     
