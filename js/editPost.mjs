@@ -5,10 +5,6 @@ const urlParams = new URLSearchParams(window.location.search);
 const postId = urlParams.get("postId");
 const name = urlParams.get("name");
 
-console.log("postId:", postId);
-console.log("name:", name);
-// Function to refer user to the edit page when Edit button is clicked
-
 //Load post data when the page is loaded.
 document.addEventListener("DOMContentLoaded", loadPostData);
 
