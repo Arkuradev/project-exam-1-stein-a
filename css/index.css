@@ -8,3 +8,8 @@ p {
 .page-container {
   text-align: center;
 }
+
+#postImage {
+  width: 500px;
+  height: auto;
+}

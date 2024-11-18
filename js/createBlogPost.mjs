@@ -1,11 +1,14 @@
 import { NoroffAPIKey } from "./constants.mjs";
-import { loginUser } from "./login.mjs";
 
-async function createBlogPost(token, name, title, body) {
+async function createBlogPost(token, name, title, body, imageUrl, imageAlt) {
   const postUrl = `https://v2.api.noroff.dev/blog/posts/${name}`;
   const postData = {
     title: title,
     body: body,
+    media: {
+      url: imageUrl,
+      alt: imageAlt,
+    },
   };
 
   try {
@@ -37,12 +40,21 @@ function createPostForm() {
     event.preventDefault(); // Prevent form from submitting normally.
 
     const title = document.getElementById("title").value;
+    const imageUrl = document.getElementById("image-url").value;
+    const imageAlt = document.getElementById("image-alt").value;
     const body = document.getElementById("body").value;
     const token = localStorage.getItem("authToken");
     const name = localStorage.getItem("name");
 
     if (token && name) {
-      const newPost = await createBlogPost(token, name, title, body);
+      const newPost = await createBlogPost(
+        token,
+        name,
+        title,
+        body,
+        imageUrl,
+        imageAlt
+      );
 
       if (newPost) {
         alert("Blog post created successfully.");

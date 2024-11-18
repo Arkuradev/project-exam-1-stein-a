@@ -10,7 +10,11 @@ export function renderBlogPost(posts) {
     
 
     <h2>${post.title}</h2>
-    <img src="${post.imageUrl}" alt="${post.title}">
+    ${
+      post.media
+        ? `<img src="${post.media.url}" id="postImage" alt="${post.media.alt}">`
+        : ""
+    }
     <p>${post.body}</p>
     
     <hr>
