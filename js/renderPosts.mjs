@@ -21,7 +21,7 @@ export function renderBlogPost(posts) {
     <p>${post.body.slice(0, 100)}...</p>
     <a href="/project-exam-1-stein-a/post/blog.html?name=${authorName}&postId=${
         post.id
-      }" aria-label="Read more about this post">Read more</a>
+      }" aria-label="Read more about ${post.title}">Read more</a>
     
     <hr>
     `;
