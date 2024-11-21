@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="../css/blogFeed.css" />
     <link rel="stylesheet" href="../media/navbar-footer.css" />
 
-    <title>GamerBlog | Blog - Inc title</title>
+    <title id="page-title"></title>
   </head>
   <header>
     <nav>
@@ -73,11 +73,16 @@
   <body>
     <main>
       <h1>A BLOG PAGE</h1>
+      <div id="post-container">
+        <h1 id="post-title"></h1>
+        <img id="post-img" src="" alt="" />
+        <p id="post-body"></p>
+      </div>
     </main>
 
     <footer>
       <img
-        src="./images/darkfooterlogo.jpg"
+        src="../images/darkfooterlogo.jpg"
         alt="GamerBlog Logo on white background"
         class="darkLogo"
       />
@@ -90,9 +95,9 @@
       <p class="footerP">Copyright &copy; 2024 GamerBlog</p>
     </footer>
   </body>
-  <script src="../js/editPost.mjs" type="module"></script>
-  <script src="../js/cancelEdit.mjs" type="module"></script>
+
   <script src="../js/sideNav.js"></script>
+  <script src="../js/blog.mjs" type="module"></script>
   <!-- <script src="../js/savePost.mjs" type="module"></script> -->
   <script src="../js/getUserInfo.mjs" type="module"></script>
 </html>

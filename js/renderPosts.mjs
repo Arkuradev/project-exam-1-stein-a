@@ -7,6 +7,7 @@ export function renderBlogPost(posts) {
       const postElement = document.createElement("div");
       const imageUrl = post.media?.url || ""; // Fallback to an empty string if no URL
       const imageAlt = post.media?.alt || "No description available"; // Fallback to an empty string if no alt text
+      const authorName = post.author?.name || "UnknownAuthor";
       postElement.classList.add("blog-post");
       postElement.innerHTML = `
     
@@ -17,7 +18,10 @@ export function renderBlogPost(posts) {
         ? `<img src="${imageUrl}" id="postImage" alt="${imageAlt}">`
         : "<p>No image available</p>"
     }
-    <p>${post.body}</p>
+    <p>${post.body.slice(0, 100)}</p>
+    <a href="/project-exam-1-stein-a/post/blog.html?name=${authorName}&postId=${
+        post.id
+      }">Read more</a>
     
     <hr>
     `;
