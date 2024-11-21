@@ -10,10 +10,10 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Orbitron:wght@400..900&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/blogFeed.css" />
-    <link rel="stylesheet" href="media/navbar-footer.css" />
-    <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/blogFeed.css" />
+    <link rel="stylesheet" href="./media/navbar-footer.css" />
+    <link rel="stylesheet" href="./css/index.css" />
 
     <title>GamerBlog | Home</title>
   </head>
@@ -21,7 +21,7 @@
     <nav>
       <ul class="sideNav">
         <li onclick="hideSideNav()">
-          <a href="#" onclick="closeSideNav()"
+          <a href="#" aria-label="Close side navigation" onclick="hideSideNav()"
             ><svg
               xmlns="http://www.w3.org/2000/svg"
               height="24px"
@@ -41,7 +41,7 @@
       </ul>
       <ul>
         <li>
-          <a href="./index.html" class="nav-logo-link"
+          <a href="./index.html" aria-label="Home" class="nav-logo-link"
             ><img
               src="./images/Lightlogo.jpg"
               class="lightLogo"
@@ -51,9 +51,13 @@
         <li><a href="./index.html" class="hideOnMobile">Home</a></li>
         <li><a href="./blog-posts.html" class="hideOnMobile">Blog</a></li>
         <li><a href="./about.html" class="hideOnMobile">About</a></li>
-        <li><a href="./account/login.html" class="hideOnMobile">Login</a></li>
+        <li>
+          <a href="./account/login.html" class="hideOnMobile login-link"
+            >Login</a
+          >
+        </li>
         <li class="hamburger-button" onclick="showSideNav()">
-          <a href="#"
+          <a href="#" aria-label="Show side navigation"
             ><svg
               xmlns="http://www.w3.org/2000/svg"
               height="24px"
@@ -70,30 +74,15 @@
     </nav>
   </header>
   <body>
-    <div class="about-container">
-      <h1>ABOUT GAMERBLOG</h1>
+    <main>
+      <div class="page-container">
+        <h1>GamerBlog Feed</h1>
 
-      <p>
         Welcome to GamerBlog, the place to go for all things gaming! You can
         create your own blog of your favorite game!
-      </p>
-
-      <p>
-        We always love to talk about stories when growing up or just nostalgic
-        moments in gaming. GamerBlog is the place to share your favorite moments
-        with the world! The memories we have shared with our friends playing
-        together and overcoming the challenges together that the games we have
-        played over the years is absolutely something we would love if you would
-        share with us and other gamers around the globe.
-      </p>
-
-      <p>
-        We are a small group of gamers that had this idea of a blog site where
-        we could share and see experiences and read stories from people who love
-        gaming too. So thats how GamerBlog came to life!
-      </p>
-    </div>
-
+      </div>
+      <div id="blogPostsContainer"></div>
+    </main>
     <footer>
       <img
         src="./images/darkfooterlogo.jpg"
@@ -102,14 +91,15 @@
       />
       <ul>
         <li><a href="./index.html">Home</a></li>
-        <li><a href="./blog/index.html">Blog</a></li>
-        <li><a href="about.html">About</a></li>
+        <li><a href="./post/blog.html">Blog</a></li>
+        <li><a href="/about.html">About</a></li>
         <li><a href="./account/login.html">Login</a></li>
       </ul>
       <p class="footerP">Copyright &copy; 2024 GamerBlog</p>
     </footer>
   </body>
   <script src="./js/sideNav.js"></script>
-  <script src="/js/renderPosts.mjs" type="module"></script>
-  <script src="/js/getBlogPosts.mjs" type="module"></script>
+  <script src="./js/renderPosts.mjs" type="module"></script>
+  <script src="./js/getBlogPosts.mjs" type="module"></script>
+  <script src="./js/getUserInfo.mjs" type="module"></script>
 </html>
