@@ -1,0 +1,33 @@
+@import url("variables.css");
+
+h1 {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+h2 {
+  margin-top: 50px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+.about-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.about-container {
+  max-width: 1000px;
+  display: flex;
+  flex-direction: column;
+}
+
+.about-container li {
+  margin-left: 25px;
+  line-height: 1.6;
+  font-size: 1rem;
+}
