@@ -19,6 +19,42 @@ function getUserInfo() {
 function updateNavbar() {
   const username = localStorage.getItem("name");
   // Selecting login link on both mobile and desktop
+
+  const loginButtons = document.querySelectorAll(".login-button");
+
+  loginButtons.forEach((button) => {
+    if (username) {
+      button.textContent = username;
+      button.onclick = () => {
+        window.location.href = "/project-exam-1-stein-a/account/manage.html";
+      };
+    } else {
+      button.textContent = "Login";
+      button.onclick = () => {
+        window.location.href = "/project-exam-1-stein-a/account/login.html";
+      };
+    }
+  });
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  const usernameLinks = document.querySelectorAll(".login-button");
+  const managePageUrl = "/project-exam-1-stein-a/account/manage.html";
+
+  usernameLinks.forEach((button) => {
+    button.addEventListener("click", (e) => {
+      e.preventDefault();
+
+      if (window.location.pathname === managePageUrl) {
+        window.location.reload();
+      } else {
+        window.location.href = managePageUrl;
+      }
+    });
+  });
+});
+
+/*
   const desktopLogin = document.getElementById("desktop-login");
   const mobileLogin = document.getElementById("mobile-login");
 
@@ -53,6 +89,8 @@ function updateNavbar() {
     }
   }
 }
+
+*/
 
 /* loginLink.textContent = userName;
     loginLink.href = "/project-exam-1-stein-a/account/manage.html";
