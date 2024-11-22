@@ -5,6 +5,14 @@
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   margin-bottom: 50px;
 }
+#post-body {
+  line-height: 1.6;
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 20px;
+  white-space: pre-line;
+  width: 800px;
+}
 
 #post-container {
   display: flex;
@@ -14,13 +22,6 @@
   padding-bottom: 100px;
   justify-content: center;
   color: black;
-}
-
-#post-container p {
-  margin-bottom: 20px;
-  width: 700px;
-  line-height: 1.5;
-  text-align: justify;
 }
 
 #post-container h1 {

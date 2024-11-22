@@ -20,7 +20,7 @@
     <nav>
       <ul class="sideNav">
         <li onclick="hideSideNav()">
-          <a href="#" onclick="closeSideNav()"
+          <a href="#" onclick="hideSideNav()"
             ><svg
               xmlns="http://www.w3.org/2000/svg"
               height="24px"
@@ -33,10 +33,10 @@
               /></svg
           ></a>
         </li>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Blog</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Login</a></li>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../blog-posts.html">Blog</a></li>
+        <li><a href="../about.html">About</a></li>
+        <li><a href="../account/login.html" id="mobile-login">Login</a></li>
       </ul>
       <ul>
         <li>
@@ -48,10 +48,15 @@
           /></a>
         </li>
         <li><a href="../index.html" class="hideOnMobile">Home</a></li>
-        <li><a href="./post/blog.html" class="hideOnMobile">Blog</a></li>
+        <li><a href="../blog-posts.html" class="hideOnMobile">Blog</a></li>
         <li><a href="../about.html" class="hideOnMobile">About</a></li>
         <li>
-          <a href="../login.html" class="hideOnMobile login-link">Login</a>
+          <a
+            href="../account/login.html"
+            id="desktop-login"
+            class="hideOnMobile"
+            >Login</a
+          >
         </li>
         <li class="hamburger-button" onclick="showSideNav()">
           <a href="#"
@@ -97,6 +102,5 @@
 
   <script src="../js/sideNav.js"></script>
   <script src="../js/blog.mjs" type="module"></script>
-  <!-- <script src="../js/savePost.mjs" type="module"></script> -->
   <script src="../js/getUserInfo.mjs" type="module"></script>
 </html>
