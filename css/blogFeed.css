@@ -49,6 +49,7 @@
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   background-color: #fff;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
 }
 
 .thumbnail:hover {
@@ -61,14 +62,36 @@
   object-fit: cover;
 }
 
-.thumbail-content {
+.thumbnail-content {
   padding: 15px;
 }
 
-.thumbail-title {
+.thumbnail-body {
+  text-decoration: none;
+}
+
+.thumbnail-title {
   font-size: 1.2rem;
   margin-bottom: 10px;
   color: #333;
   text-align: center;
   font-weight: bold;
+}
+
+.thumbail-description {
+  font-size: 0.9rem;
+  color: #666;
+  text-align: center;
+}
+
+.thumbnail-image {
+  text-decoration: none;
+  color: black;
+}
+
+.thumbnail-link {
+  text-decoration: none;
+}
+.thumbnail-link p {
+  color: black;
 }

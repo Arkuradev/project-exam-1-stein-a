@@ -25,15 +25,17 @@ function renderThumbnails(posts) {
   posts.forEach((post) => {
     const thumbnail = document.createElement("div");
     thumbnail.classList.add("thumbnail");
-    thumbnail.innerHTML = `
-    <img src="${post.media?.url || "default-thumbnail.jpg"}" alt="${
-      post.media?.alt || "No description available"
-    }">
+    thumbnail.innerHTML = `<a class="thumbnail-link" href="/project-exam-1-stein-a/post/blog.html?name=${
+      post.author?.name
+    }&postId=${post.id}">
+    <img class="thumbnail-image" src="${
+      post.media?.url || "No image available"
+    }" alt="${post.media?.alt || "No image available"}">
     <div class="thumbnail-content"></div>
       <h3 class="thumbnail-title">${post.title}</h3>
       <p class="thumbnail-body">${post.body.slice(0, 100)}...</p>
       <button onclick="openBlogPost('${post.author?.name}', '${post.id}')">
-    </div>`;
+    </div></a>`;
 
     thumbnailGrid.appendChild(thumbnail);
   });
