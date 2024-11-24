@@ -20,8 +20,8 @@ export async function renderAdminPanel(token, name) {
     row.innerHTML = `
   <td><a href="/project-exam-1-stein-a/post/blog.html?name=${name}&postId=${post.id}" target="_blank">${post.title}</a></td>
   <td>
-    <button class="edit-btn" onclick="openEditPage('${name}', '${post.id}')">Edit</button>
-    <button class="delete-btn">Delete</button>
+    <button class="edit-btn button-5" onclick="openEditPage('${name}', '${post.id}')">Edit</button>
+    <button class="delete-btn button-5">Delete</button>
   </td>
 `;
 
