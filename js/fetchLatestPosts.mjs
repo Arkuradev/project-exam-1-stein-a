@@ -34,9 +34,9 @@ function renderThumbnails(posts) {
     <div class="thumbnail-content"></div>
       <h3 class="thumbnail-title">${post.title}</h3>
       <p class="thumbnail-body">${post.body.slice(0, 100)}...</p>
-      <button onclick="openBlogPost('${post.author?.name}', '${post.id}')">
+      
     </div></a>`;
-
+    // <button onclick="openBlogPost('${post.author?.name}', '${post.id}')"> REMOVE THIS IF NEEDED!
     thumbnailGrid.appendChild(thumbnail);
   });
 }
