@@ -52,7 +52,11 @@
         <li><a href="../blog-posts.html" class="hideOnMobile">Blog</a></li>
         <li><a href="../about.html" class="hideOnMobile">About</a></li>
         <li>
-          <a href="./account/login.html" id="desktop-login" class="hideOnMobile login-button">Login</a
+          <a
+            href="./account/login.html"
+            id="desktop-login"
+            class="hideOnMobile login-button"
+            >Login</a
           >
         </li>
         <li class="hamburger-button" onclick="showSideNav()">
@@ -77,8 +81,8 @@
       <div id="content-wrap">
         <div id="adminPanel">
           <h2>Manage Blog</h2>
-          <a href="../post/index.html" id="newPostLink" class="button-5">New post</a
-          ><br /><br /><br /><br />
+          <a href="../post/index.html" class="button-5">New post</a>
+          <br /><br /><br /><br />
           <table id="postsTable">
             <thead>
               <tr>
@@ -89,28 +93,28 @@
             <tbody></tbody>
           </table>
         </div>
-
-        <button type="submit" id="logoutButton" class="button-5">Log out</button>
+        <button type="submit" id="logoutButton" class="button-5">
+          Log out
+        </button>
       </div>
-
-      <footer id="footer">
-        <img
-          src="../images/darkfooterlogo.jpg"
-          alt="GamerBlog Logo on dark background"
-          class="darkLogo"
-        />
-        <ul>
-          <li><a href="/index.html">Home</a></li>
-          <li><a href="./blog/index.html">Blog</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="./login.html">Login</a></li>
-        </ul>
-        <p class="footerP">Copyright &copy; 2024 GamerBlog</p>
-      </footer>
+    </div>
+    <footer id="footer">
+      <img
+        src="../images/darkfooterlogo.jpg"
+        alt="GamerBlog Logo on dark background"
+        class="darkLogo"
+      />
+      <ul>
+        <li><a href="/index.html">Home</a></li>
+        <li><a href="./blog/index.html">Blog</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="./login.html">Login</a></li>
+      </ul>
+      <p class="footerP">Copyright &copy; 2024 GamerBlog</p>
+    </footer>
   </body>
   <script src="../js/renderAdminPanel.mjs" type="module"></script>
   <script src="../js/getUserInfo.mjs" type="module"></script>
   <script src="../js/logOut.mjs" type="module"></script>
   <script src="../js/sideNav.js"></script>
-
 </html>

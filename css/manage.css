@@ -130,7 +130,7 @@ Button is used from Sketch at https://getcssscan.com/css-buttons-examples */
   border: 1px solid transparent;
   box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
   box-sizing: border-box;
-  color: -var(--dark-color);
+  color: var(--dark-color);
   cursor: pointer;
   display: inline-flex;
   font-family: "Montserrat", sans-serif;
