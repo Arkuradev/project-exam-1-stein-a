@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", async () => {
       document.getElementById("post-title").textContent = postData.data.title;
       document.getElementById("post-body").textContent = postData.data.body;
       document.getElementById("post-author").textContent =
-        "Created by: " + postData.data.author?.name;
+        "Author: " + postData.data.author?.name;
 
       const image = document.getElementById("post-img");
       if (postData.data.media?.url) {

@@ -34,6 +34,26 @@
   margin-bottom: 10px;
 }
 
-#author-share-container svg {
-  padding-left: 200px;
+#share-container {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  cursor: pointer;
+}
+
+#share-icon {
+  width: 24px;
+  height: 24px;
+  color: #007bff;
+  transition: color 0.2s ease-in-out;
+}
+
+#share-icon:hover {
+  color: #0056b3;
+}
+
+#copy-message {
+  display: none;
+  color: green;
+  font-size: 14px;
 }
