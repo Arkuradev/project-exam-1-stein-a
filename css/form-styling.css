@@ -1,5 +1,6 @@
 #registerForm,
-#loginForm {
+#loginForm,
+#editPostForm {
   display: flex;
   flex-direction: column;
   align-items: center;
