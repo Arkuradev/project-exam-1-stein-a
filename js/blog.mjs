@@ -17,6 +17,8 @@ document.addEventListener("DOMContentLoaded", async () => {
     if (response.ok) {
       document.getElementById("post-title").textContent = postData.data.title;
       document.getElementById("post-body").textContent = postData.data.body;
+      document.getElementById("post-author").textContent =
+        "Created by: " + postData.data.author.name;
 
       const image = document.getElementById("post-img");
       if (postData.data.media?.url) {
@@ -35,3 +37,55 @@ document.addEventListener("DOMContentLoaded", async () => {
       "<p>Error: Failed to fetch blog post. Please try again. later</p>";
   }
 });
+
+// Function to set page title and meta description in specific blog post.
+
+async function loadBlogPost() {
+  const params = new URLSearchParams(window.location.search);
+  const postId = params.get("postId");
+  const name = params.get("name");
+
+  if (!postId || !name) {
+    console.error("Missing postId or name in URL");
+    return;
+  }
+
+  try {
+    const response = await fetch(
+      `https://v2.api.noroff.dev/blog/posts/${name}/${postId}`
+    );
+    const postData = await response.json();
+
+    if (response.ok) {
+      const postTitle = postData.data.title;
+      const postBody = postData.data.body;
+
+      //Update the page title
+      document.title = postTitle;
+
+      //Update the meta description
+      const metaDescription = document.querySelector(
+        'meta[name="description"]'
+      );
+      if (metaDescription) {
+        metaDescription.setAttribute("content", postBody.substring(0, 150)); //Using first 150 characters as meta description
+      } else {
+        // If no meta description exists
+        const newMetaDescription = document.createElement("meta");
+        newMetaDescription.name = "description";
+        newMetaDescription.content = postBody.substring(0, 150);
+        document.head.appendChild(newMetaDescription);
+      }
+
+      document.getElementById("post-title").textContent = postTitle;
+      document.getElementById("post-body").textContent = postBody;
+    } else {
+      console.error("Failed to fetch blog post:", data.message);
+    }
+  } catch (error) {
+    console.error("Error:", error);
+  }
+}
+
+// Call function when page loads
+document.addEventListener("DOMContentLoaded", loadBlogPost);

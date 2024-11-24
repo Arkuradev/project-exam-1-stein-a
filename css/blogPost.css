@@ -27,3 +27,13 @@
 #post-container h1 {
   margin-bottom: 20px;
 }
+
+#author-share-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+#author-share-container svg {
+  padding-left: 200px;
+}

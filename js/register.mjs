@@ -8,7 +8,7 @@ export async function register(name, email, password) {
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({ name, email, password, venueManager: false }),
+      body: JSON.stringify({ name, email, password }),
     });
 
     const data = await response.json();
