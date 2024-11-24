@@ -45,9 +45,6 @@ tr:hover {
 #newPostLink:hover {
   color: var(--primary-color);
 }
-a:hover {
-  color: var(--background-color);
-}
 
 #adminPanel {
   display: flex;
