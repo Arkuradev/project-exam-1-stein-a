@@ -41,6 +41,10 @@ a {
 tr:hover {
   background-color: var(--primary-color);
 }
+
+#newPostLink:hover {
+  color: var(--primary-color);
+}
 a:hover {
   color: var(--background-color);
 }
