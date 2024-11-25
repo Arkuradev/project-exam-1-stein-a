@@ -1,4 +1,4 @@
-async function fetchAndRenderBlogs() {
+export async function fetchAndRenderBlogs() {
   const blogGrid = document.getElementById("blog-thumbnails");
   const name = localStorage.getItem("name");
 
@@ -21,9 +21,7 @@ async function fetchAndRenderBlogs() {
       };
       // Rendering thumbnail content.
       thumbnail.innerHTML = `
-      <img src="${post.media?.url || "../images/Lightlogo.jpg"}" alt="${
-        post.media?.alt || post.title
-      }">
+      <img src="${post.media?.url}" alt="${post.media?.alt || post.title}">
       <div class="thumbnail-title">${post.title.slice(0, 15)}..</div>
 
       `;

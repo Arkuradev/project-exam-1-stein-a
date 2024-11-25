@@ -2,7 +2,7 @@ import { loginUser } from "./login.mjs";
 import { getBlogPosts } from "./getBlogPosts.mjs";
 import { deletePost } from "./deletePost.mjs";
 
-window.openEditPage = function (name, postId) {
+window.openEditPage = function getBlogPosts(name, postId) {
   const baseUrl = "https://arkuradev.github.io/project-exam-1-stein-a";
   const editUrl = `${baseUrl}/post/edit.html?name=${name}&postId=${postId}`;
   window.location.href = editUrl;
