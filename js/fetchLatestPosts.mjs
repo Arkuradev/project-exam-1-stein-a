@@ -3,7 +3,9 @@
 const thumbnailGrid = document.getElementById("thumbnail-grid");
 
 async function fetchLatestPosts() {
-  const name = localStorage.getItem("name");
+  const name = "steinarild";
+  //Hard coded username because noroff blog api cannot fetch data unless its tied to a user.
+  // This is a limitation of the API. (I was using localStorage.getItem("name") before)
   const apiUrl = `https://v2.api.noroff.dev/blog/posts/${name}?limit=12&sort=created&sortOrder=desc`;
   try {
     const response = await fetch(apiUrl);

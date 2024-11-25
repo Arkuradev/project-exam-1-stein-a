@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="./css/blogFeed.css" />
     <link rel="stylesheet" href="./media/navbar-footer.css" />
     <link rel="stylesheet" href="./css/index.css" />
+    <link rel="stylesheet" href="./css/carousel.css" />
     <link
       rel="apple-touch-icon"
       sizes="180x180"
@@ -80,17 +81,23 @@
   </header>
   <body>
     <main>
-      <div class="page-container">
-        <h1>GamerBlog Feed</h1>
-
-        Welcome to GamerBlog, the place to go for all things gaming! You can
-        create your own blog of your favorite game!
+      <div id="slider-container">
+        <button id="prev-btn" aria-label="Previous Slide">❮</button>
+        <div id="slider-wrapper">
+          <div id="slider">
+            <!-- Slides will be dynamically added here -->
+          </div>
+        </div>
+        <button id="next-btn" aria-label="Next Slide">❯</button>
       </div>
-      <!-- <div id="blogPostsContainer"></div> -->
-      <section id="blog-feed">
-        <div id="thumbnail-grid"></div>
-      </section>
+
+      <div class="page-container">
+        <div id="blog-feed">
+          <div id="thumbnail-grid"></div>
+        </div>
+      </div>
     </main>
+
     <footer>
       <img
         src="./images/darkfooterlogo.jpg"
@@ -111,4 +118,5 @@
   <script src="./js/getBlogPosts.mjs" type="module"></script>
   <script src="./js/getUserInfo.mjs" type="module"></script>
   <script src="./js/fetchLatestPosts.mjs" type="module"></script>
+  <script src="./js/slider.mjs" type="module"></script>
 </html>
