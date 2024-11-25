@@ -13,7 +13,12 @@
     <link rel="stylesheet" href="../css/style.css" />
     <link rel="stylesheet" href="../media/navbar-footer.css" />
     <link rel="stylesheet" href="../css/form-styling.css" />
-
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./images/apple-touch-icon.png"
+    />
+    <link rel="icon" type="image/png" href="./images/favicon.ico" />
     <title>GamerBlog | Home</title>
   </head>
   <header>
@@ -50,7 +55,9 @@
         <li><a href="../index.html" class="hideOnMobile">Home</a></li>
         <li><a href="../blog.html" class="hideOnMobile">Blog</a></li>
         <li><a href="../about.html" class="hideOnMobile">About</a></li>
-        <li><a href="./login.html" class="hideOnMobile login-link">Login</a></li>
+        <li>
+          <a href="./login.html" class="hideOnMobile login-link">Login</a>
+        </li>
         <li class="hamburger-button" onclick="showSideNav()">
           <a href="#"
             ><svg
@@ -70,42 +77,43 @@
   </header>
   <body>
     <main>
-    <div class="page-container">
-      <h1>LOGIN OR CREATE AN ACCOUNT</h1>
+      <div class="page-container">
+        <h1>LOGIN OR CREATE AN ACCOUNT</h1>
 
-      <form id="loginForm">
-        <label for="email">Email:</label>
-        <input
-          name="email"
-          id="email"
-          type="email"
-          placeholder="@stud.noroff.no"
-        />
-        <label for="password">Password:</label>
-        <input
-          name="password"
-          id="password"
-          type="password"
-          placeholder="Password"
-        />
-        <button type="submit">Login</button>
-        <a class="registerLink" href="../account/register.html">Register</a>
-      </form>
+        <form id="loginForm">
+          <label for="email">Email:</label>
+          <input
+            name="email"
+            id="email"
+            type="email"
+            placeholder="@stud.noroff.no"
+          />
+          <label for="password">Password:</label>
+          <input
+            name="password"
+            id="password"
+            type="password"
+            placeholder="Password"
+          />
+          <button type="submit">Login</button>
+          <a class="registerLink" href="../account/register.html">Register</a>
+        </form>
+      </div>
     </main>
-      <footer>
-        <img
-          src="../images/darkfooterlogo.jpg"
-          alt="GamerBlog Logo on dark background"
-          class="darkLogo"
-        />
-        <ul>
-          <li><a href="../index.html">Home</a></li>
-          <li><a href="#">Blog</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="../account/login.html">Login</a></li>
-        </ul>
-        <p class="footerP">Copyright &copy; 2024 GamerBlog</p>
-      </footer>
+    <footer>
+      <img
+        src="../images/darkfooterlogo.jpg"
+        alt="GamerBlog Logo on dark background"
+        class="darkLogo"
+      />
+      <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="../account/login.html">Login</a></li>
+      </ul>
+      <p class="footerP">Copyright &copy; 2024 GamerBlog</p>
+    </footer>
     <script src="../js/sideNav.js"></script>
     <script src="../js/login.mjs" type="module"></script>
   </body>
