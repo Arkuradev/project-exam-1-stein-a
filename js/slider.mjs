@@ -22,7 +22,7 @@ async function fetchAndRenderSlider() {
       slide.classList.add("slider-item");
       slide.onclick = () => {
         // Navigating to the post when clicked.
-        window.location.href = `/post/blog.html?name=${post.author?.name}&postId=${post.id}`;
+        window.location.href = `/project-exam-1-stein-a/post/blog.html?name=${post.author?.name}&postId=${post.id}`;
       };
       slide.innerHTML = `
         <img src="${post.media?.url || "default-image.jpg"}" alt="${
