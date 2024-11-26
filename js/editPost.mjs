@@ -23,6 +23,8 @@ async function loadPostData() {
 
     if (response.ok) {
       document.getElementById("title").value = data.data.title;
+      document.getElementById("image-url").value = data.data.media.url;
+      document.getElementById("image-alt").value = data.data.media.alt;
       document.getElementById("body").value = data.data.body;
       //Additional fields added later.
     } else {
@@ -36,6 +38,8 @@ async function loadPostData() {
 // Save edited post function.
 export async function savePost() {
   const title = document.getElementById("title").value;
+  const imageUrl = document.getElementById("image-url").value;
+  const imageAlt = document.getElementById("image-alt").value;
   const body = document.getElementById("body").value;
   const token = localStorage.getItem("authToken");
 
@@ -54,7 +58,7 @@ export async function savePost() {
           "Content-Type": "application/json",
           Authorization: `Bearer ${token}`,
         },
-        body: JSON.stringify({ title, body }),
+        body: JSON.stringify({ title, body, imageUrl, imageAlt }),
       }
     );
 
