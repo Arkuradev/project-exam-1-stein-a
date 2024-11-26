@@ -1,4 +1,3 @@
-import { loginUser } from "./login.mjs";
 import { getBlogPosts } from "./getBlogPosts.mjs";
 import { deletePost } from "./deletePost.mjs";
 
