@@ -59,6 +59,7 @@ async function loadBlogPost() {
     if (response.ok) {
       const postTitle = postData.data.title;
       const postBody = postData.data.body;
+      const created = postData.data.created;
 
       //Update the page title
       document.title = postTitle;
@@ -79,6 +80,13 @@ async function loadBlogPost() {
 
       document.getElementById("post-title").textContent = postTitle;
       document.getElementById("post-body").textContent = postBody;
+      document.getElementById("post-created").textContent = created;
+
+      const createdDate = new Date(created);
+      const formattedDate = createdDate.toISOString().split("T")[0]; // Get only the date part
+
+      document.getElementById("post-created").textContent =
+        "Blog posted: " + formattedDate;
     } else {
       console.error("Failed to fetch blog post:", data.message);
     }

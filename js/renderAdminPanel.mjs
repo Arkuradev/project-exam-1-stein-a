@@ -38,7 +38,8 @@ export async function renderAdminPanel(token, name) {
   });
 }
 
-// FIX THIS FUNCTION
+// Checking if user is logged in before rendering posts for the user. If no token
+// is found, an error message is displayed.
 
 (async function () {
   const token = localStorage.getItem("authToken");
