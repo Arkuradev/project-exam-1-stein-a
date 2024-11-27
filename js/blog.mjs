@@ -78,15 +78,23 @@ async function loadBlogPost() {
         document.head.appendChild(newMetaDescription);
       }
 
+      const createdDate = new Date(created);
+
+      if (!isNaN(createdDate)) {
+        const formattedDate = createdDate.toLocaleDateString("no-NO", {
+          day: "2-digit",
+          month: "2-digit",
+          year: "numeric",
+        });
+        document.getElementById("post-created").textContent =
+          "Blog posted: " + formattedDate;
+      } else {
+        console.error("Invalid date:", created);
+        document.getElementById("post-created").textContent = "Invalid date";
+      }
+
       document.getElementById("post-title").textContent = postTitle;
       document.getElementById("post-body").textContent = postBody;
-      document.getElementById("post-created").textContent = created;
-
-      const createdDate = new Date(created);
-      const formattedDate = createdDate.toISOString().split("T")[0]; // Get only the date part
-
-      document.getElementById("post-created").textContent =
-        "Blog posted: " + formattedDate;
     } else {
       console.error("Failed to fetch blog post:", data.message);
     }
