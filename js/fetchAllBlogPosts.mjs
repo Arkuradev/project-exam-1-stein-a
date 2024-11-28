@@ -1,6 +1,13 @@
 export async function fetchAndRenderBlogs() {
   const blogGrid = document.getElementById("blog-thumbnails");
-  const name = localStorage.getItem("name");
+  /*
+  Hard coded username in a const to be able to show blog posts on the page without being logged in. 
+  Noroff API is not set up to handle rendering of posts without a specific user. 
+  Was told by a teacher that this was something we should do. 
+
+  Normally I would use localStorage.getItem("name") to get the username from local storage here. 
+  */
+  const name = "steinarild";
 
   try {
     const response = await fetch(

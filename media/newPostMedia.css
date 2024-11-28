@@ -1,0 +1,13 @@
+@media (max-width: 600px) {
+  .postForm,
+  .editPostForm {
+    width: 200px;
+  }
+  .form-container {
+    width: 230px;
+  }
+
+  textarea {
+    width: 200px;
+  }
+}

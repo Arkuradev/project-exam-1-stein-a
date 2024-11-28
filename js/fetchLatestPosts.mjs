@@ -4,8 +4,13 @@ const thumbnailGrid = document.getElementById("thumbnail-grid");
 
 async function fetchLatestPosts() {
   const name = "steinarild";
-  //Hard coded username because noroff blog api cannot fetch data unless its tied to a user.
-  // This is a limitation of the API. (I was using localStorage.getItem("name") before)
+  /*
+  Hard coded username in a const to be able to show blog posts on the page without being logged in. 
+  Noroff API is not set up to handle rendering of posts without a specific user. 
+  Was told by a teacher that this was something we should do. 
+
+  Normally I would use localStorage.getItem("name") to get the username from local storage here. 
+  */
   const apiUrl = `https://v2.api.noroff.dev/blog/posts/${name}?limit=12&sort=created&sortOrder=desc`;
   try {
     const response = await fetch(apiUrl);
@@ -38,7 +43,6 @@ function renderThumbnails(posts) {
       <p class="thumbnail-body">${post.body.slice(0, 100)}...</p>
       
     </div></a>`;
-    // <button onclick="openBlogPost('${post.author?.name}', '${post.id}')"> REMOVE THIS IF NEEDED!
     thumbnailGrid.appendChild(thumbnail);
   });
 }
