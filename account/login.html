@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="../css/style.css" />
     <link rel="stylesheet" href="../media/navbar-footer.css" />
     <link rel="stylesheet" href="../css/form-styling.css" />
+    <link rel="stylesheet" href="../css/login.css" />
     <link
       rel="apple-touch-icon"
       sizes="180x180"
@@ -81,25 +82,31 @@
     <main>
       <div class="page-container">
         <h1>LOGIN OR CREATE AN ACCOUNT</h1>
-
-        <form id="loginForm">
-          <label for="email">Email:</label>
-          <input
-            name="email"
-            id="email"
-            type="email"
-            placeholder="@stud.noroff.no"
-          />
-          <label for="password">Password:</label>
-          <input
-            name="password"
-            id="password"
-            type="password"
-            placeholder="Password"
-          />
-          <button type="submit" class="button-5">Login</button>
-          <a class="registerLink" href="../account/register.html">Register</a>
-        </form>
+        <div id="form-container">
+          <form id="loginForm">
+            <label for="email">Email:</label>
+            <input
+              name="email"
+              id="email"
+              type="email"
+              placeholder="@stud.noroff.no"
+            />
+            <label for="password">Password:</label>
+            <input
+              name="password"
+              id="password"
+              type="password"
+              placeholder="Password"
+            />
+            <button type="submit" class="button-5 loginBtn">Login</button>
+            <p class="registerText">
+              Don't have an account?
+              <a class="registerLink" href="../account/register.html"
+                >Register</a
+              >
+            </p>
+          </form>
+        </div>
       </div>
     </main>
     <footer>

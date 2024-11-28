@@ -44,7 +44,8 @@ button {
 }
 
 .postForm,
-.editPostForm {
+.editPostForm,
+#loginForm {
   border-radius: 5px;
   width: 500px;
   margin-bottom: 50px;
