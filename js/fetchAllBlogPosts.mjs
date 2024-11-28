@@ -17,7 +17,7 @@ export async function fetchAndRenderBlogs() {
       thumbnail.classList.add("thumbnail");
       thumbnail.onclick = () => {
         //Navigating to the post when clicked.
-        window.location.href = `/post/blog.html?name=${post.author?.name}&postId=${post.id}`;
+        window.location.href = `/project-exam-1-stein-a/post/blog.html?name=${post.author?.name}&postId=${post.id}`;
       };
       // Rendering thumbnail content.
       thumbnail.innerHTML = `
