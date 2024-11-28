@@ -1,5 +1,3 @@
-import { API_BLOG_EDIT_URL } from "./constants.mjs";
-
 // Get postId and name from URL parameters
 const urlParams = new URLSearchParams(window.location.search);
 const postId = urlParams.get("postId");
@@ -67,7 +65,6 @@ export async function savePost() {
 
     if (response.ok) {
       alert("Post updated successfully.");
-      console.log("Updated post data:", responseData.data);
       window.location.href = "../account/manage.html";
     } else {
       alert(

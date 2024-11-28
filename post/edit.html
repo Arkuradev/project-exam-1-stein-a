@@ -92,11 +92,14 @@
 
         <label for="body">Content:</label>
         <textarea id="body" required></textarea>
-
-        <button onclick="savePost()" class="button-5">Save</button>
-        <button id="cancelBtn" class="button-5" onclick="cancelEdit()">
-          Cancel
-        </button>
+        <div class="button-container">
+          <button onclick="savePost()" id="saveBtn" class="button-5">
+            Save
+          </button>
+          <button id="cancelBtn" class="button-5" onclick="cancelEdit()">
+            Cancel
+          </button>
+        </div>
       </form>
     </main>
 

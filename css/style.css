@@ -143,6 +143,15 @@ hr {
   transform: translateY(0);
 }
 
+#cancelBtn,
+.delete-btn {
+  background-color: rgb(252, 26, 26);
+}
+
+#saveBtn {
+  background-color: rgb(22, 141, 22);
+}
+
 /* Footer section */
 footer {
   background-color: var(--dark-color);
