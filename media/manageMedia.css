@@ -1,0 +1,13 @@
+@media (max-width: 540px) {
+  table {
+    width: 300px;
+  }
+  tr {
+    height: 20px;
+    text-align: left;
+  }
+  #content-wrap button {
+    width: 20px;
+    font-size: 12px;
+  }
+}

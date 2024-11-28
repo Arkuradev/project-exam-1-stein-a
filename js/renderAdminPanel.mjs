@@ -17,9 +17,13 @@ export async function renderAdminPanel(token, name) {
     const row = document.createElement("tr");
 
     row.innerHTML = `
-  <td><a href="/project-exam-1-stein-a/post/blog.html?name=${name}&postId=${post.id}" target="_blank">${post.title}</a></td>
+  <td><a href="/project-exam-1-stein-a/post/blog.html?name=${name}&postId=${
+      post.id
+    }" target="_blank">${post.title.slice(0, 20)}...</a></td>
   <td>
-    <button class="edit-btn button-5" onclick="openEditPage('${name}', '${post.id}')">Edit</button>
+    <button class="edit-btn button-5" onclick="openEditPage('${name}', '${
+      post.id
+    }')">Edit</button>
     <button class="delete-btn button-5">Delete</button>
   </td>
 `;
