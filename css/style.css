@@ -5,11 +5,13 @@
   padding: 0;
 }
 
+html,
 body {
   display: flex;
   flex-direction: column;
-
+  height: 100%;
   margin: 0;
+  padding: 0;
   font-family: Montserrat, sans-serif;
   background-color: var(--background-color);
 }
@@ -99,8 +101,9 @@ hr {
   background-clip: padding-box;
   background-color: var(--primary-color);
   border: 1px solid transparent;
-  box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   box-sizing: border-box;
+  border-radius: 5px;
   color: var(--dark-color);
   cursor: pointer;
   display: inline-flex;
