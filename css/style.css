@@ -148,7 +148,8 @@ hr {
   background-color: rgb(252, 26, 26);
 }
 
-#saveBtn {
+#saveBtn,
+.createBtn {
   background-color: rgb(22, 141, 22);
 }
 

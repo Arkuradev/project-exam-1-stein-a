@@ -80,19 +80,20 @@
   </header>
   <body>
     <main>
-      <div class="editPostForm">
-        <form id="editPostForm" onsubmit="return false;">
+      <h1>EDIT BLOG POST</h1>
+      <div id="form-container">
+        <form id="editPostForm" class="postForm" onsubmit="return false;">
           <label for="title">Title:</label>
           <input type="text" id="title" required />
 
-          <label for="img">Image URL:</label>
-          <input type="url" id="image-url" required />
+          <label for="image-url">Image URL:</label>
+          <input type="text" name="image-url" id="image-url" required />
 
           <label for="image-alt">Image description:</label>
           <input type="text" id="image-alt" />
 
           <label for="body">Content:</label>
-          <textarea id="body" required></textarea>
+          <textarea id="body" name="body" required></textarea>
           <div class="button-container">
             <button onclick="savePost()" id="saveBtn" class="button-5">
               Save
