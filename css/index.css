@@ -21,10 +21,10 @@ p {
   align-items: center;
   width: 1000px;
 }
-.welcome-image {
+#welcome-container img {
   width: 500px;
+  align-items: center;
   height: auto;
-  background: transparent;
 }
 
 #postImage {
