@@ -48,7 +48,8 @@ h1 {
   display: flex;
   color: var(--dark-color);
   flex-direction: row;
-
+  font-size: 14px;
+  font-style: italic;
   justify-content: space-between;
   margin-bottom: 30px;
   width: 500px;
