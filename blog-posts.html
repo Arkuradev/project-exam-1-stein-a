@@ -18,6 +18,8 @@
     <link rel="stylesheet" href="./css/allBlogPosts.css" />
     <link rel="stylesheet" href="./media/navbar-footer.css" />
     <link rel="stylesheet" href="./css/index.css" />
+    <link rel="stylesheet" href="./media/sliderMedia.css" />
+    <link rel="stylesheet" href="./css/slider.css" />
     <link
       rel="apple-touch-icon"
       sizes="180x180"
@@ -84,6 +86,15 @@
   </header>
   <body>
     <main>
+      <div id="slider-container">
+        <button id="prev-btn" aria-label="Previous Slide">❮</button>
+        <div id="slider-wrapper">
+          <div id="slider">
+            <!-- Slides will be dynamically added here -->
+          </div>
+        </div>
+        <button id="next-btn" aria-label="Next Slide">❯</button>
+      </div>
       <div class="thumbnail-grid" id="blog-thumbnails"></div>
     </main>
     <footer>
@@ -105,4 +116,5 @@
   <script src="./js/renderPosts.mjs" type="module"></script>
   <script src="./js/fetchAllBlogPosts.mjs" type="module"></script>
   <script src="./js/getUserInfo.mjs" type="module"></script>
+  <script src="./js/slider.mjs" type="module"></script>
 </html>

@@ -75,30 +75,31 @@
   </header>
   <body>
     <main>
-      <h1>REGISTER A NEW ACCOUNT</h1>
+      <h1>Register new account</h1>
+      <div id="form-container">
+        <form id="registerForm">
+          <label for="name">Name:</label>
+          <input name="name" id="name" type="text" placeholder="Name" />
 
-      <form id="registerForm">
-        <label for="name">Name:</label>
-        <input name="name" id="name" type="text" placeholder="Name" />
+          <label for="email">Email:</label>
+          <input
+            name="email"
+            id="email"
+            type="email"
+            placeholder="@stud.noroff.no"
+          />
 
-        <label for="email">Email:</label>
-        <input
-          name="email"
-          id="email"
-          type="email"
-          placeholder="@stud.noroff.no"
-        />
+          <label for="password">Password:</label>
+          <input
+            name="password"
+            id="password"
+            type="password"
+            placeholder="Password"
+          />
 
-        <label for="password">Password:</label>
-        <input
-          name="password"
-          id="password"
-          type="password"
-          placeholder="Password"
-        />
-
-        <button type="submit" class="button-5">Register</button>
-      </form>
+          <button type="submit" class="button-5">Register</button>
+        </form>
+      </div>
     </main>
     <footer>
       <img

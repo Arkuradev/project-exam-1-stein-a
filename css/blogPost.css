@@ -1,5 +1,9 @@
 @import url("variables.css");
 
+h1 {
+  padding: 10px;
+}
+
 #postImage,
 #post-img {
   width: 500px;

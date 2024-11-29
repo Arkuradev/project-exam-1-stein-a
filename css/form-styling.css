@@ -40,12 +40,12 @@ button {
   text-decoration: none;
   color: var(--primary-color);
   cursor: pointer;
-  font-weight: bold;
 }
 
 .postForm,
 .editPostForm,
-#loginForm {
+#loginForm,
+#registerForm {
   border-radius: 5px;
   width: 500px;
   margin-bottom: 50px;
