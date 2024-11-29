@@ -2,6 +2,13 @@
   #post-container {
     width: 600px;
   }
+  h1 {
+    font-size: 25px;
+  }
+  #post-img {
+    width: 550px;
+    height: auto;
+  }
 
   #post-body {
     margin-top: 40px;

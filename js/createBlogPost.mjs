@@ -59,6 +59,7 @@ function createPostForm() {
       if (newPost) {
         alert("Blog post created successfully.");
         form.reset(); // Reset the form after successful creation.
+        window.location.href = `/project-exam-1-stein-a/account/manage.html`;
       }
     } else {
       alert("Please log in to create a blog post.");
