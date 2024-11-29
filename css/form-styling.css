@@ -25,6 +25,10 @@ input {
   width: 200px;
 }
 
+#name {
+  background-color: #f8f8f8;
+}
+
 button {
   margin-top: 10px;
   height: 30px;
