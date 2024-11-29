@@ -1,0 +1,37 @@
+@media (max-width: 942px) {
+  #post-container {
+    width: 600px;
+  }
+
+  #post-body {
+    margin-top: 40px;
+    width: 500px;
+  }
+}
+
+@media (max-width: 650px) {
+  #post-container {
+    width: 300px;
+  }
+  h1 {
+    font-size: 20px;
+  }
+  #post-img {
+    width: 290px;
+    height: auto;
+  }
+
+  #author-share-container {
+    font-size: 14px;
+    width: 280px;
+  }
+  #post-created {
+    font-size: 14px;
+  }
+
+  #post-body {
+    padding: 5px;
+    font-size: 14px;
+    width: 290px;
+  }
+}

@@ -1,3 +1,5 @@
+@import url("variables.css");
+
 #postImage,
 #post-img {
   width: 500px;
@@ -14,6 +16,11 @@
   width: 800px;
 }
 
+#blog-container {
+  display: flex;
+  justify-content: center;
+}
+
 #post-container {
   display: flex;
   flex-direction: column;
@@ -22,6 +29,10 @@
   padding-bottom: 100px;
   justify-content: center;
   color: black;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  width: 900px;
+  height: auto;
+  margin-bottom: 100px;
 }
 
 #post-container h1 {
@@ -30,30 +41,32 @@
 
 #author-share-container {
   display: flex;
-  align-items: center;
-  margin-bottom: 10px;
-}
+  color: var(--dark-color);
+  flex-direction: row;
 
-#share-container {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-  cursor: pointer;
+  justify-content: space-between;
+  margin-bottom: 30px;
+  width: 500px;
 }
 
 #share-icon {
-  width: 24px;
-  height: 24px;
-  color: #007bff;
-  transition: color 0.2s ease-in-out;
-}
-
-#share-icon:hover {
-  color: #0056b3;
+  fill: var(--primary-color);
 }
 
 #copy-message {
   display: none;
   color: #0d960d;
   font-size: 14px;
+}
+
+#post-body {
+  margin-bottom: 50px;
+}
+
+#post-created {
+  width: 100%;
+  padding-right: 25px;
+  text-align: right;
+  font-size: 14px;
+  color: var(--dark-color);
 }
