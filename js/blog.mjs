@@ -64,6 +64,17 @@ async function loadBlogPost() {
       //Update the page title
       document.title = postTitle;
 
+      //Update the meta title
+      const metaTitle = document.querySelector('meta[name="title"]');
+      if (metaTitle) {
+        metaTitle.setAttribute("content", postTitle);
+      } else {
+        // If no meta title exists
+        const newMetaTitle = document.createElement("meta");
+        newMetaTitle.name = "title";
+        newMetaTitle.content = postTitle;
+        document.head.appendChild(newMetaTitle);
+      }
       //Update the meta description
       const metaDescription = document.querySelector(
         'meta[name="description"]'
