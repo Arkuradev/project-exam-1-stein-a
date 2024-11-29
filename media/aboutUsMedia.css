@@ -1,13 +1,30 @@
-@media (max-width: 500px) {
+@media (max-width: 940px) {
+  .about-container {
+    width: 600px;
+    height: auto;
+  }
+}
+
+@media (max-width: 642px) {
+  .about-container {
+    width: 320px;
+    height: auto;
+  }
   h1 {
-    font-size: 1.5rem;
+    font-size: 25px;
   }
   h2 {
-    font-size: 1rem;
+    font-size: 20px;
   }
   p,
-  .bold,
+  ul,
+  .about-container ul li,
+  .bold {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+  p,
   .about-container ul li {
-    font-size: 0.8rem;
+    padding: 5px;
   }
 }

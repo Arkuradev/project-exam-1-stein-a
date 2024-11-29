@@ -2,6 +2,7 @@
 
 h1 {
   text-align: center;
+  margin-top: 15px;
   margin-bottom: 40px;
 }
 
@@ -21,9 +22,11 @@ h2 {
 }
 
 .about-container {
-  max-width: 1000px;
+  max-width: 900px;
+  margin-bottom: 100px;
   display: flex;
   flex-direction: column;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .about-container li {

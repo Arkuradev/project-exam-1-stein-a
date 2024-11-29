@@ -46,8 +46,14 @@ button {
 .editPostForm,
 #loginForm,
 #registerForm {
-  border-radius: 5px;
   width: 500px;
+}
+
+.postForm,
+.editPostForm,
+#loginForm,
+#registerForm {
+  border-radius: 5px;
   margin-bottom: 50px;
   margin-top: 10px;
   padding: 10px 20px;

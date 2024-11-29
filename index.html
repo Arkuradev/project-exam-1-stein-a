@@ -24,63 +24,63 @@
     <link rel="icon" type="image/png" href="./images/favicon.ico" />
     <title>GamerBlog | Home</title>
   </head>
-  <header>
-    <nav>
-      <ul class="sideNav">
-        <li onclick="hideSideNav()">
-          <a href="#" aria-label="Hide navigation" onclick="closeSideNav()"
-            ><svg
-              xmlns="http://www.w3.org/2000/svg"
-              height="24px"
-              viewBox="0 -960 960 960"
-              width="24px"
-              fill="#000000"
-            >
-              <path
-                d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"
-              /></svg
-          ></a>
-        </li>
-        <li><a href="./index.html">Home</a></li>
-        <li><a href="./blog-posts.html">Blog</a></li>
-        <li><a href="./about.html">About</a></li>
-        <li><a href="./account/login.html" class="login-button">Login</a></li>
-      </ul>
-      <ul>
-        <li>
-          <a href="./index.html" aria-label="Home" class="nav-logo-link"
-            ><img
-              src="./images/Lightlogo.jpg"
-              class="lightLogo"
-              alt="GamerBlog Logo on white background"
-          /></a>
-        </li>
-        <li><a href="./index.html" class="hideOnMobile">Home</a></li>
-        <li><a href="./blog-posts.html" class="hideOnMobile">Blog</a></li>
-        <li><a href="./about.html" class="hideOnMobile">About</a></li>
-        <li>
-          <a href="./account/login.html" class="login-button hideOnMobile"
-            >Login</a
-          >
-        </li>
-        <li class="hamburger-button" onclick="showSideNav()">
-          <a href="#" aria-label="Show navigation bar"
-            ><svg
-              xmlns="http://www.w3.org/2000/svg"
-              height="24px"
-              viewBox="0 -960 960 960"
-              width="24px"
-              fill="#000000"
-            >
-              <path
-                d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"
-              /></svg
-          ></a>
-        </li>
-      </ul>
-    </nav>
-  </header>
   <body>
+    <header>
+      <nav>
+        <ul class="sideNav">
+          <li onclick="hideSideNav()">
+            <a href="#" aria-label="Hide navigation" onclick="closeSideNav()"
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                height="24px"
+                viewBox="0 -960 960 960"
+                width="24px"
+                fill="#000000"
+              >
+                <path
+                  d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"
+                /></svg
+            ></a>
+          </li>
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="./blog-posts.html">Blog</a></li>
+          <li><a href="./about.html">About</a></li>
+          <li><a href="./account/login.html" class="login-button">Login</a></li>
+        </ul>
+        <ul>
+          <li>
+            <a href="./index.html" aria-label="Home" class="nav-logo-link"
+              ><img
+                src="./images/Lightlogo.jpg"
+                class="lightLogo"
+                alt="GamerBlog Logo on white background"
+            /></a>
+          </li>
+          <li><a href="./index.html" class="hideOnMobile">Home</a></li>
+          <li><a href="./blog-posts.html" class="hideOnMobile">Blog</a></li>
+          <li><a href="./about.html" class="hideOnMobile">About</a></li>
+          <li>
+            <a href="./account/login.html" class="login-button hideOnMobile"
+              >Login</a
+            >
+          </li>
+          <li class="hamburger-button" onclick="showSideNav()">
+            <a href="#" aria-label="Show navigation bar"
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                height="24px"
+                viewBox="0 -960 960 960"
+                width="24px"
+                fill="#000000"
+              >
+                <path
+                  d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"
+                /></svg
+            ></a>
+          </li>
+        </ul>
+      </nav>
+    </header>
     <main>
       <div id="slider-container">
         <button id="prev-btn" aria-label="Previous Slide">❮</button>
@@ -113,11 +113,12 @@
       </ul>
       <p class="footerP">Copyright &copy; 2024 GamerBlog</p>
     </footer>
+
+    <script src="./js/sideNav.js"></script>
+    <script src="./js/renderPosts.mjs" type="module"></script>
+    <script src="./js/getBlogPosts.mjs" type="module"></script>
+    <script src="./js/getUserInfo.mjs" type="module"></script>
+    <script src="./js/fetchLatestPosts.mjs" type="module"></script>
+    <script src="./js/slider.mjs" type="module"></script>
   </body>
-  <script src="./js/sideNav.js"></script>
-  <script src="./js/renderPosts.mjs" type="module"></script>
-  <script src="./js/getBlogPosts.mjs" type="module"></script>
-  <script src="./js/getUserInfo.mjs" type="module"></script>
-  <script src="./js/fetchLatestPosts.mjs" type="module"></script>
-  <script src="./js/slider.mjs" type="module"></script>
 </html>
