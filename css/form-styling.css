@@ -38,8 +38,14 @@ button {
 .registerLink {
   margin-top: 10px;
   text-decoration: none;
-  color: var(--primary-color);
+  color: var(--dark-color);
+
   cursor: pointer;
+}
+
+.registerLink:hover {
+  text-decoration: underline;
+  color: var(--primary-color);
 }
 
 .postForm,

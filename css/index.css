@@ -16,10 +16,10 @@ p {
 }
 
 #welcome-container {
+  width: 1000px;
+  align-items: center;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  width: 1000px;
 }
 #welcome-container img {
   width: 500px;
