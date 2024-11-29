@@ -36,6 +36,7 @@ h1 {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   width: 900px;
   height: auto;
+  border-radius: 5px;
   margin-bottom: 100px;
 }
 
@@ -55,11 +56,13 @@ h1 {
 
 #share-icon {
   fill: var(--primary-color);
+  cursor: pointer;
 }
 
 #copy-message {
   display: none;
   color: #0d960d;
+
   font-size: 14px;
 }
 
