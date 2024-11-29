@@ -25,11 +25,7 @@ tr {
   text-align: center;
 }
 
-tr:nth-child(odd) {
-  background-color: #fff;
-}
-
-tr:nth-child(even) {
+tr {
   background-color: var(--background-color);
 }
 
