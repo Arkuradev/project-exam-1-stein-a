@@ -10,5 +10,5 @@ document.addEventListener("DOMContentLoaded", () => {
 async function logOutUser() {
   localStorage.removeItem("authToken");
   localStorage.removeItem("name");
-  window.location.href = "./login.html";
+  window.location.href = "./account/login.html";
 }
