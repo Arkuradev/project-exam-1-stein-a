@@ -1,6 +1,6 @@
 #slider-container {
   position: relative;
-  max-width: 800px;
+  max-width: 900px;
   margin: 0 auto;
   overflow: hidden;
   display: flex;
@@ -27,7 +27,7 @@
 .slider-item img {
   width: 100%;
   cursor: pointer;
-  max-height: 300px;
+  max-height: 430px;
   object-fit: cover;
   border-radius: 8px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
