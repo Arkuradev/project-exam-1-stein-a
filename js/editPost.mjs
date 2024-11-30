@@ -37,7 +37,6 @@ async function loadPostData() {
   }
 }
 
-/*
 // Save edited post function.
 export async function savePost() {
   const title = document.getElementById("title").value;
@@ -87,4 +86,3 @@ export async function savePost() {
 
 //Make savePost globally accessible.
 window.savePost = savePost;
-*/

@@ -1,4 +1,7 @@
-import { showMessage } from "./messages.mjs";
+/* import { showMessage } from "./messages.mjs";
+
+// Save edited post function.
+
 export async function savePost(name, postId) {
   const title = document.getElementById("title").value;
   const body = document.getElementById("body").value;
@@ -35,3 +38,5 @@ export async function savePost(name, postId) {
 }
 
 window.savePost = savePost;
+
+*/
