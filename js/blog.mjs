@@ -1,10 +1,12 @@
+import { showMessage } from "./errorDisplay.mjs";
+
 document.addEventListener("DOMContentLoaded", async () => {
   const urlParams = new URLSearchParams(window.location.search);
   const postId = urlParams.get("postId");
   const name = urlParams.get("name");
 
   if (!postId || !name) {
-    document.body.innerHTML = "<p>Error: Missing post information.</p>";
+    showMessage("Invalid blog post URL.", "error");
     return;
   }
 
@@ -29,12 +31,11 @@ document.addEventListener("DOMContentLoaded", async () => {
       }
     } else {
       console.error("Failed to fetch blog post:", data.message);
-      document.body.innerHTML = "<p>Error: Failed to fetch blog post.</p>";
+      showMessage("Failed to fetch blog post.", "error");
     }
   } catch (error) {
     console.error("Error:", error);
-    document.body.innerHTML =
-      "<p>Error: Failed to fetch blog post. Please try again. later</p>";
+    showMessage("An error occurred while fetching the blog post.", "error");
   }
 });
 
@@ -47,6 +48,7 @@ async function loadBlogPost() {
 
   if (!postId || !name) {
     console.error("Missing postId or name in URL");
+    showMessage("Missing name or post ID in URL.", "error");
     return;
   }
 
@@ -101,6 +103,7 @@ async function loadBlogPost() {
           "Blog posted: " + formattedDate;
       } else {
         console.error("Invalid date:", created);
+        showMessage("Invalid date.", "error");
         document.getElementById("post-created").textContent = "Invalid date";
       }
 
@@ -108,9 +111,11 @@ async function loadBlogPost() {
       document.getElementById("post-body").textContent = postBody;
     } else {
       console.error("Failed to fetch blog post:", data.message);
+      showMessage("Failed to fetch blog post.", "error");
     }
   } catch (error) {
     console.error("Error:", error);
+    showMessage("An error occurred while fetching the blog post.", "error");
   }
 }
 

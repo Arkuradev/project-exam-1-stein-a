@@ -12,6 +12,7 @@ document.addEventListener("DOMContentLoaded", loadPostData);
 async function loadPostData() {
   if (!postId || !name) {
     console.error("Missing postId or name in URL");
+    showMessage("Missing name or post ID in URL.", "error");
     return;
   }
 
@@ -65,7 +66,6 @@ export async function savePost() {
     );
 
     const responseData = await response.json();
-    console.log(responseData);
 
     if (response.ok) {
       showMessage("Post updated successfully.", "success");
