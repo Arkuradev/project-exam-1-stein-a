@@ -55,6 +55,14 @@ h1 {
   width: 500px;
 }
 
+#share-container {
+  display: flex;
+  gap: 10px;
+}
+#share-container svg {
+  margin-top: -5px;
+}
+
 #share-icon {
   fill: var(--primary-color);
   cursor: pointer;
