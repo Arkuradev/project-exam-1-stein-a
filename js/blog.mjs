@@ -92,7 +92,7 @@ async function loadBlogPost() {
       }
 
       const createdDate = new Date(created);
-
+      // Formatting date to use norwegian/european date format.
       if (!isNaN(createdDate)) {
         const formattedDate = createdDate.toLocaleDateString("no-NO", {
           day: "2-digit",

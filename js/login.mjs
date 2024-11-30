@@ -29,7 +29,7 @@ export async function loginUser(email, password) {
       return accessToken;
     } else {
       showMessage(
-        "Login failed. Please check your email and password.",
+        "Login failed. Please check your email and password and try again.",
         "error"
       );
     }

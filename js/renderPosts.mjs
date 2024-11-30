@@ -1,7 +1,4 @@
 export function renderBlogPost(posts) {
-  /* const container = document.getElementById("blogPostsContainer");
-  container.innerHTML = ""; */
-
   if (posts && posts.data) {
     posts.data.forEach((post) => {
       const postElement = document.createElement("div");
@@ -25,8 +22,6 @@ export function renderBlogPost(posts) {
     
     <hr>
     `;
-      // Will remove if live version works after test.
-      // container.appendChild(postElement);
     });
   } else {
     console.error("No posts found.", posts);

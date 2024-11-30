@@ -1,3 +1,5 @@
+import { showMessage } from "./errorDisplay.mjs";
+
 const slider = document.getElementById("slider");
 const prevBtn = document.getElementById("prev-btn");
 const nextBtn = document.getElementById("next-btn");
@@ -44,6 +46,7 @@ async function fetchAndRenderSlider() {
     // Adjust the starting position
     slider.style.transform = `translateX(-100%)`;
   } catch (error) {
+    showMessage("Failed to fetch blog posts.", "error");
     console.error("Error fetching blog posts:", error);
   }
 }
