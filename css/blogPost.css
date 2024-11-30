@@ -64,8 +64,11 @@ h1 {
 }
 
 #share-icon {
-  fill: var(--primary-color);
+  fill: var(--dark-color);
   cursor: pointer;
+}
+#share-icon:hover {
+  fill: var(--primary-color);
 }
 
 #copy-message {
