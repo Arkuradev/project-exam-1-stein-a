@@ -1,4 +1,4 @@
-import { showMessage } from "./messages.mjs";
+import { showMessage } from "./errorDisplay.mjs";
 
 // Get postId and name from URL parameters
 const urlParams = new URLSearchParams(window.location.search);
