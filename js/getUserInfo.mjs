@@ -4,6 +4,7 @@ function updateNavbar() {
   // Selecting login link on both mobile and desktop
 
   const loginButtons = document.querySelectorAll(".login-button");
+  const logOutLink = document.getElementById("logout-link");
 
   loginButtons.forEach((button) => {
     if (username) {
