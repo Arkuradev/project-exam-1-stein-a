@@ -73,8 +73,7 @@ h1 {
 
 #copy-message {
   display: none;
-  color: #0d960d;
-
+  color: var(--createBtn-color);
   font-size: 14px;
 }
 

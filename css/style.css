@@ -156,7 +156,7 @@ hr {
 
 #saveBtn,
 .createBtn {
-  background-color: rgb(22, 141, 22);
+  background-color: var(--createBtn-color);
 }
 
 #error-container {
