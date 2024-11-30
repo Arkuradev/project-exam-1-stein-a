@@ -14,13 +14,7 @@ input {
   margin-bottom: 10px;
   border-radius: 5px;
   height: 20px;
-  background-color: #f8f8f8;
   width: 200px;
-}
-
-input[type="text"]:focus,
-textarea:focus {
-  outline: 1px solid var(--primary-color);
 }
 
 textarea {
@@ -30,7 +24,6 @@ textarea {
   height: 150px;
   width: 400px;
   resize: none;
-  background-color: #f8f8f8;
 }
 
 .button-container {
