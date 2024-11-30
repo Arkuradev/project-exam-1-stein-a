@@ -1,5 +1,6 @@
 import { getBlogPosts } from "./getBlogPosts.mjs";
 import { deletePost } from "./deletePost.mjs";
+import { showMessage } from "./errorDisplay.mjs";
 
 window.openEditPage = function getBlogPosts(name, postId) {
   const baseUrl = "https://arkuradev.github.io/project-exam-1-stein-a";
@@ -52,6 +53,7 @@ export async function renderAdminPanel(token, name) {
   if (token) {
     renderAdminPanel(token, name);
   } else {
+    showMessage("You need to be logged in to view this page.", "error");
     console.error("User is not logged in or token is missing.");
   }
 })();

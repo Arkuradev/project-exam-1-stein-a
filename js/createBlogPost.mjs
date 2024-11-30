@@ -1,4 +1,5 @@
 import { NoroffAPIKey } from "./constants.mjs";
+import { showMessage } from "./errorDisplay.mjs";
 
 async function createBlogPost(token, name, title, body, imageUrl, imageAlt) {
   const postUrl = `https://v2.api.noroff.dev/blog/posts/${name}`;
@@ -24,12 +25,13 @@ async function createBlogPost(token, name, title, body, imageUrl, imageAlt) {
 
     if (response.ok) {
       const data = await response.json();
-      console.log("Blog post created:", data);
+      showMessage("Blog post created successfully.", "success");
       return data;
     } else {
-      console.log("Failed to create blog post:", response.statusText);
+      showMessage("Failed to create blog post. Please try again", "error");
     }
   } catch (error) {
+    showMessage("An error occurred while creating blog post.", "error");
     console.error("Error creating blog post:", error);
   }
 }
@@ -57,12 +59,14 @@ function createPostForm() {
       );
 
       if (newPost) {
-        alert("Blog post created successfully.");
-        form.reset(); // Reset the form after successful creation.
-        window.location.href = `/project-exam-1-stein-a/account/manage.html`;
+        showMessage("Blog post created successfully.", "success");
+        setTimeout(() => {
+          form.reset(); // Reset the form after successful creation.
+          window.location.href = `/project-exam-1-stein-a/account/manage.html`;
+        }, 2000);
       }
     } else {
-      alert("Please log in to create a blog post.");
+      showMessage("Please log in to create a blog post.", "error");
     }
   });
 }

@@ -1,3 +1,5 @@
+import { showMessage } from "./errorDisplay.mjs";
+
 export async function fetchAndRenderBlogs() {
   const blogGrid = document.getElementById("blog-thumbnails");
   /*
@@ -36,6 +38,10 @@ export async function fetchAndRenderBlogs() {
     });
   } catch (error) {
     console.error("Error fetching blog posts:", error);
+    showMessage(
+      "An error occurred while fetching blog posts, please try again.",
+      "error"
+    );
     blogGrid.innerHTML;
   }
 }

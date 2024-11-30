@@ -1,5 +1,6 @@
 // Registration of a user to the API
 import { API_REGISTER_URL } from "./constants.mjs";
+import { showMessage } from "./errorDisplay.mjs";
 
 export async function register(name, email, password) {
   try {
@@ -12,11 +13,13 @@ export async function register(name, email, password) {
     });
 
     const data = await response.json();
-    console.log(data);
     if (response.ok) {
-      alert("Registration successful!");
+      showMessage("Registration successful! You can now log in.", "success");
     } else {
-      alert("Registration failed!");
+      showMessage(
+        "Registration failed! Please make sure to use a valid @stud.noroff.no email and have a password with at least 8 characters.",
+        "error"
+      );
     }
   } catch (error) {
     console.error("Error:", error);

@@ -1,4 +1,5 @@
 import { NoroffAPIKey } from "./constants.mjs";
+import { showMessage } from "./errorDisplay.mjs";
 import { renderBlogPost } from "./renderPosts.mjs";
 export async function getBlogPosts(token, name) {
   const postUrl = `https://v2.api.noroff.dev/blog/posts/${name}`;
@@ -17,10 +18,11 @@ export async function getBlogPosts(token, name) {
 
       return data;
     } else {
-      console.log("Failed to retrieve blog posts:", response.statusText);
+      showMessage("Failed to retrieve blog posts.", "error");
     }
   } catch (error) {
     console.error("Error retrieving blog posts:", error);
+    showMessage("An error occurred while retrieving blog posts.", "error");
   }
 }
 

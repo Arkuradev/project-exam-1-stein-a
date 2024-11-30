@@ -1,5 +1,6 @@
 import { API_LOGIN_URL } from "./constants.mjs";
 import { NoroffAPIKey } from "./constants.mjs";
+import { showMessage } from "./errorDisplay.mjs";
 
 // Login in and retrieve token for user.
 
@@ -27,7 +28,10 @@ export async function loginUser(email, password) {
       }
       return accessToken;
     } else {
-      console.log("Login failed:", response.statusText);
+      showMessage(
+        "Login failed. Please check your email and password.",
+        "error"
+      );
     }
   } catch (error) {
     console.error("Error logging in:", error);
@@ -57,7 +61,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (accessToken) {
       window.location.href = "./manage.html";
     } else {
-      alert("Login failed. Please check your email and password.");
+      showMessage("Wrong username or password, please try again.", "error");
     }
   });
 });
