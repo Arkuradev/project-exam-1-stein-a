@@ -1,3 +1,4 @@
+import { showMessage } from "./messages.mjs";
 export async function savePost(name, postId) {
   const title = document.getElementById("title").value;
   const body = document.getElementById("body").value;
@@ -15,19 +16,21 @@ export async function savePost(name, postId) {
     );
 
     const responseData = await response.json();
-    console.log(responseData);
 
     if (response.ok) {
-      alert("Post updated successfully.");
-      console.log("Updated post data:", responseData.data);
-      window.location.href = "/manage.html";
+      setTimeout(() => {
+        showMessage("Post updated successfully.", "success");
+        window.location.href = "/manage.html";
+      }, 2000);
     } else {
-      alert(
-        "Failed to update post." + (responseData.message || "Unknown error")
+      showMessage(
+        "Failed to update post." +
+          (responseData.message || "Unknown error", "error")
       );
     }
   } catch (error) {
     console.error("Error updating post:", error);
+    showMessage("An error occurred while updating the post.", "error");
   }
 }
 

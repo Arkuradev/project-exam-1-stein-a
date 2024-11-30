@@ -1,5 +1,6 @@
 import { NoroffAPIKey } from "./constants.mjs";
 import { renderAdminPanel } from "./renderAdminPanel.mjs";
+import { showMessage } from "./errorDisplay.mjs";
 
 export async function deletePost(postId, token, name) {
   const confirmDelete = confirm("Are you sure you want to delete this post?");
@@ -17,20 +18,16 @@ export async function deletePost(postId, token, name) {
         }
       );
 
-      //Log the response details
-      console.log("Response status: ", response.status);
-      console.log(postId);
-      console.log("Response status text: ", response.statusText);
-
       if (response.ok) {
-        alert("Post deleted successfully.");
+        showMessage("Post deleted successfully.", "success");
 
         renderAdminPanel(token, name); //Refresh the list of posts.
       } else {
-        alert("Failed to delete post.");
+        showMessage("Failed to delete post.", "error");
       }
     } catch (error) {
       console.error("Error deleting post:", error);
+      showMessage("An error occurred while deleting the post.", "error");
     }
   }
 }

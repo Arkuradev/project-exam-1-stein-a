@@ -1,3 +1,5 @@
+import { showMessage } from "./messages.mjs";
+
 // Get postId and name from URL parameters
 const urlParams = new URLSearchParams(window.location.search);
 const postId = urlParams.get("postId");
@@ -27,12 +29,15 @@ async function loadPostData() {
       //Additional fields added later.
     } else {
       console.error("Failed to fetch post data:", data.message);
+      showMessage("Failed to fetch post data.", "error");
     }
   } catch (error) {
     console.error("Error fetching post data:", error);
+    showMessage("An error occurred while fetching post data.", "error");
   }
 }
 
+/*
 // Save edited post function.
 export async function savePost() {
   const title = document.getElementById("title").value;
@@ -43,7 +48,7 @@ export async function savePost() {
 
   if (!token) {
     console.error("No auth token found");
-    alert("You need to be logged in to edit posts.");
+    showMessage("You need to be logged in to edit posts.", "error");
     return;
   }
 
@@ -64,17 +69,22 @@ export async function savePost() {
     console.log(responseData);
 
     if (response.ok) {
-      alert("Post updated successfully.");
-      window.location.href = "../account/manage.html";
+      showMessage("Post updated successfully.", "success");
+      setTimeout(() => {
+        window.location.href = "../account/manage.html";
+      }, 2000);
     } else {
-      alert(
-        "Failed to update post." + (responseData.message || "Unknown error")
+      showMessage(
+        "Failed to update post." +
+          (responseData.message || "Unknown error", "error")
       );
     }
   } catch (error) {
     console.error("Error updating post:", error);
+    showMessage("An error occurred while updating the post.", "error");
   }
 }
 
 //Make savePost globally accessible.
 window.savePost = savePost;
+*/
