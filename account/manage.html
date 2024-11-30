@@ -92,12 +92,13 @@
     </header>
     <main>
       <div id="page-container">
+        <h2>Manage Blog</h2>
+        <button type="submit" id="logoutButton">Log out</button>
         <div id="content-wrap">
           <div id="adminPanel">
-            <h2>Manage Blog</h2>
-
-            <a href="../post/index.html" class="button-5">New post</a>
-            <br /><br /><br /><br />
+            <a href="../post/index.html" class="button-5 newPostBtn"
+              >New post</a
+            >
             <div id="error-container"></div>
             <table id="postsTable">
               <thead>
@@ -109,9 +110,6 @@
               <tbody></tbody>
             </table>
           </div>
-          <button type="submit" id="logoutButton" class="button-5">
-            Log out
-          </button>
         </div>
       </div>
     </main>

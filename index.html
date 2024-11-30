@@ -33,7 +33,7 @@
       <nav>
         <ul class="sideNav">
           <li onclick="hideSideNav()">
-            <a href="#" aria-label="Hide navigation" onclick="closeSideNav()"
+            <a href="#" aria-label="Hide navigation" onclick="hideSideNav()"
               ><svg
                 xmlns="http://www.w3.org/2000/svg"
                 height="24px"
@@ -50,9 +50,6 @@
           <li><a href="./blog-posts.html">Blog</a></li>
           <li><a href="./about.html">About</a></li>
           <li><a href="./account/login.html" class="login-button">Login</a></li>
-          <li>
-            <a href="#" id="logout-link">Log out</a>
-          </li>
         </ul>
         <ul>
           <li>
@@ -70,9 +67,6 @@
             <a href="./account/login.html" class="login-button hideOnMobile"
               >Login</a
             >
-          </li>
-          <li>
-            <a href="#" id="logout-link" class="hideOnMobile">Log out</a>
           </li>
           <li class="hamburger-button" onclick="showSideNav()">
             <a href="#" aria-label="Show navigation bar"

@@ -9,7 +9,9 @@ body {
   font-family: Montserrat, sans-serif;
   background-color: var(--background-color);
 }
-
+h2 {
+  text-align: center;
+}
 #postTable {
   display: flex;
   flex-direction: column;
@@ -43,12 +45,13 @@ tr:hover {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 50px;
+  margin-top: 10px;
   margin-bottom: 20px;
 }
 
 #page-container {
   display: flex;
+  align-items: center;
   flex-direction: column;
   min-height: 100vh;
 }
@@ -60,22 +63,50 @@ tr:hover {
   justify-content: center;
 }
 #content-wrap button {
-  width: 100px;
+  width: 125px;
   height: 30px;
 }
-#content-wrap #logoutButton {
+#content-wrap {
   margin-bottom: 50px;
-}
-#logoutButton {
-  width: 100px;
-  height: 30px;
-  margin-bottom: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 0 auto;
 }
 
 #content-wrap h2 {
   margin-bottom: 20px;
+}
+
+#logoutButton {
+  align-items: center;
+  width: 125px;
+  background-clip: padding-box;
+  background-color: var(--primary-color);
+  border: 1px solid transparent;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  box-sizing: border-box;
+  border-radius: 5px;
+  color: var(--dark-color);
+  cursor: pointer;
+  display: inline-flex;
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  justify-content: center;
+  line-height: 1.25;
+  margin-top: 30px;
+  min-height: 3rem;
+  padding: calc(0.875rem - 1px) calc(1.5rem - 1px);
+  position: relative;
+  text-decoration: none;
+  transition: all 250ms;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: baseline;
+}
+
+#logoutButton:hover,
+#logoutButton:focus {
+  background-color: #fb8332;
+  color: #fff;
+  border-color: #fff;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
 }

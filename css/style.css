@@ -71,11 +71,6 @@ nav a:hover {
   color: var(--background-color);
 }
 
-#logout-link {
-  vertical-align: middle;
-  line-height: 45px;
-}
-
 /* Logo link hover effect hidden */
 .nav-logo-link:hover {
   background-color: transparent;
