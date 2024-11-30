@@ -1,4 +1,4 @@
-/* import { showMessage } from "./messages.mjs";
+import { showMessage } from "./messages.mjs";
 
 // Save edited post function.
 
@@ -38,5 +38,3 @@ export async function savePost(name, postId) {
 }
 
 window.savePost = savePost;
-
-*/
