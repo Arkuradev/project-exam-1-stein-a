@@ -18,6 +18,7 @@ p {
 #welcome-container {
   width: 800px;
   align-items: center;
+  text-align: center;
   display: flex;
   flex-direction: column;
 }
