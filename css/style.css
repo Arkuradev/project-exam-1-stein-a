@@ -12,7 +12,7 @@ body {
   height: 100%;
   margin: 0;
   padding: 0;
-  font-family: Montserrat, sans-serif;
+  font-family: var(--font-family);
   background-color: var(--background-color);
 }
 
@@ -113,7 +113,7 @@ hr {
   color: var(--dark-color);
   cursor: pointer;
   display: inline-flex;
-  font-family: "Montserrat", sans-serif;
+  font-family: var(--font-family);
   font-size: 16px;
   font-weight: 500;
   justify-content: center;
@@ -151,7 +151,11 @@ hr {
 
 #cancelBtn,
 .delete-btn {
-  background-color: rgb(252, 26, 26);
+  background-color: var(--cancelBtn-color);
+}
+#cancelBtn:hover,
+.delete-btn:hover {
+  background-color: var(--cancelBtn-hover-color);
 }
 
 #saveBtn,

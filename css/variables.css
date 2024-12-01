@@ -4,7 +4,9 @@
   --background-color: #fff;
   --form-color: #dcebfc;
   --cancelBtn-color: #fc1a1a;
+  --cancelBtn-hover-color: #fc0000;
   --createBtn-color: #20b120;
+  --primaryBtnHover-color: #fb8332;
 
   --font-family: "Montserrat", sans-serif;
 }
