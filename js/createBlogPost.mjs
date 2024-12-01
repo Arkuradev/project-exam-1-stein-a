@@ -24,10 +24,9 @@ async function createBlogPost(token, name, title, body, imageUrl, imageAlt) {
       body: JSON.stringify(postData),
     });
 
-    console.log("Blog post created:", data);
     return data;
   } catch (error) {
-    alert("An error occurred while creating blog post.");
+    console.error("Error creating blog post:", error);
   }
 }
 /* if (response.ok) {
