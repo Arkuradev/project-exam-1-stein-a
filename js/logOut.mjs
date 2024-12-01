@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
     logoutButton.addEventListener("click", logOutUser);
   }
 });
-
+// Clears local storage and redirects to login page.
 async function logOutUser() {
   localStorage.removeItem("authToken");
   localStorage.removeItem("name");

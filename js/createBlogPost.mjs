@@ -29,18 +29,6 @@ async function createBlogPost(token, name, title, body, imageUrl, imageAlt) {
     console.error("Error creating blog post:", error);
   }
 }
-/* if (response.ok) {
-      const data = await response.json();
-      showMessage("Blog post created successfully.", "success");
-      return data;
-    } else {
-      showMessage("Failed to create blog post. Please try again", "error");
-    }
-  } catch (error) {
-    showMessage("An error occurred while creating blog post.", "error");
-    console.error("Error creating blog post:", error);
-  }
-} */
 
 function createPostForm() {
   const form = document.getElementById("createPostForm");

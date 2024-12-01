@@ -16,6 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
         );
       })
       .catch((error) => {
+        showMessage("Failed to copy URL to clipboard.", "error");
         console.error("Error copying URL:", error);
       });
   });

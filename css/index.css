@@ -16,7 +16,7 @@ p {
 }
 
 #welcome-container {
-  width: 1000px;
+  width: 800px;
   align-items: center;
   display: flex;
   flex-direction: column;
