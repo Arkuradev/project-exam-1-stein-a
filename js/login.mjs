@@ -1,10 +1,12 @@
 import { API_LOGIN_URL } from "./constants.mjs";
 import { NoroffAPIKey } from "./constants.mjs";
 import { showMessage } from "./errorDisplay.mjs";
+import { showLoading, hideLoading } from "./loadingSpinner.mjs";
 
 // Login in and retrieve token for user.
 
 export async function loginUser(email, password) {
+  showLoading();
   try {
     const response = await fetch(API_LOGIN_URL, {
       method: "POST",
@@ -36,6 +38,7 @@ export async function loginUser(email, password) {
   } catch (error) {
     console.error("Error logging in:", error);
   }
+  hideLoading();
 }
 
 document.addEventListener("DOMContentLoaded", () => {
