@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="../css/blogFeed.css" />
     <link rel="stylesheet" href="../media/navbar-footer.css" />
     <link rel="stylesheet" href="../media/editCreatePostMedia.css" />
+    <link rel="stylesheet" href="../css/loadingSpinner.css" />
     <link
       rel="apple-touch-icon"
       sizes="180x180"
@@ -89,6 +90,9 @@
     <main>
       <h1>NEW BLOG POST</h1>
       <div id="error-container"></div>
+      <div id="loading-indicator" class="loading hidden">
+        <div class="spinner"></div>
+      </div>
       <div id="form-container">
         <form id="createPostForm" class="postForm">
           <label for="title">Title:</label>

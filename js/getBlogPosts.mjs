@@ -1,8 +1,11 @@
 import { NoroffAPIKey } from "./constants.mjs";
 import { showMessage } from "./errorDisplay.mjs";
 import { renderBlogPost } from "./renderPosts.mjs";
+import { showLoading, hideLoading } from "./loadingSpinner.mjs";
 export async function getBlogPosts(token, name) {
   const postUrl = `https://v2.api.noroff.dev/blog/posts/${name}`;
+
+  showLoading(); //Show loading spinner before starting the fetch operation
 
   try {
     const response = await fetch(postUrl, {
@@ -23,6 +26,8 @@ export async function getBlogPosts(token, name) {
   } catch (error) {
     console.error("Error retrieving blog posts:", error);
     showMessage("An error occurred while retrieving blog posts.", "error");
+  } finally {
+    hideLoading(); //Hide loading spinner after the fetch operation is complete
   }
 }
 
@@ -32,7 +37,9 @@ export async function getBlogPosts(token, name) {
   const name = localStorage.getItem("name");
 
   if (token && name) {
+    showLoading();
     const posts = await getBlogPosts(token, name);
+    hideLoading();
     if (posts) {
       renderBlogPost(posts);
     }

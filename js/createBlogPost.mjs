@@ -1,5 +1,6 @@
 import { NoroffAPIKey } from "./constants.mjs";
 import { showMessage } from "./errorDisplay.mjs";
+import { fetchWithLoading } from "./fetchWithLoading.mjs";
 
 async function createBlogPost(token, name, title, body, imageUrl, imageAlt) {
   const postUrl = `https://v2.api.noroff.dev/blog/posts/${name}`;
@@ -13,7 +14,7 @@ async function createBlogPost(token, name, title, body, imageUrl, imageAlt) {
   };
 
   try {
-    const response = await fetch(postUrl, {
+    const data = await fetchWithLoading(postUrl, {
       method: "POST",
       headers: {
         Authorization: `Bearer ${token}`,
@@ -23,7 +24,13 @@ async function createBlogPost(token, name, title, body, imageUrl, imageAlt) {
       body: JSON.stringify(postData),
     });
 
-    if (response.ok) {
+    console.log("Blog post created:", data);
+    return data;
+  } catch (error) {
+    alert("An error occurred while creating blog post.");
+  }
+}
+/* if (response.ok) {
       const data = await response.json();
       showMessage("Blog post created successfully.", "success");
       return data;
@@ -34,7 +41,7 @@ async function createBlogPost(token, name, title, body, imageUrl, imageAlt) {
     showMessage("An error occurred while creating blog post.", "error");
     console.error("Error creating blog post:", error);
   }
-}
+} */
 
 function createPostForm() {
   const form = document.getElementById("createPostForm");

@@ -1,3 +1,5 @@
+import { fetchWithLoading } from "./fetchWithLoading.mjs";
+
 // Fetching data from the API.
 
 const thumbnailGrid = document.getElementById("thumbnail-grid");
