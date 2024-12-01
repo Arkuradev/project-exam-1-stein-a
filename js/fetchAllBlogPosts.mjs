@@ -1,6 +1,8 @@
 import { showMessage } from "./errorDisplay.mjs";
+import { showLoading, hideLoading } from "./loadingSpinner.mjs";
 
 export async function fetchAndRenderBlogs() {
+  showLoading();
   const blogGrid = document.getElementById("blog-thumbnails");
   /*
   Hard coded username in a const to be able to show blog posts on the page without being logged in. 
@@ -36,6 +38,7 @@ export async function fetchAndRenderBlogs() {
       `;
       blogGrid.appendChild(thumbnail);
     });
+    hideLoading();
   } catch (error) {
     console.error("Error fetching blog posts:", error);
     showMessage(

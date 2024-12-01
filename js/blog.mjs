@@ -1,6 +1,8 @@
 import { showMessage } from "./errorDisplay.mjs";
+import { showLoading, hideLoading } from "./loadingSpinner.mjs";
 
 document.addEventListener("DOMContentLoaded", async () => {
+  showLoading();
   const urlParams = new URLSearchParams(window.location.search);
   const postId = urlParams.get("postId");
   const name = urlParams.get("name");
@@ -37,6 +39,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     console.error("Error:", error);
     showMessage("An error occurred while fetching the blog post.", "error");
   }
+  hideLoading();
 });
 
 // Function to set page title and meta description in specific blog post.

@@ -1,4 +1,5 @@
 import { showMessage } from "./errorDisplay.mjs";
+import { showLoading, hideLoading } from "./loadingSpinner.mjs";
 
 // Get postId and name from URL parameters
 const urlParams = new URLSearchParams(window.location.search);
@@ -10,6 +11,7 @@ document.addEventListener("DOMContentLoaded", loadPostData);
 
 // Fetch and display post data.
 async function loadPostData() {
+  showLoading();
   if (!postId || !name) {
     console.error("Missing postId or name in URL");
     showMessage("Missing name or post ID in URL.", "error");
@@ -36,6 +38,7 @@ async function loadPostData() {
     console.error("Error fetching post data:", error);
     showMessage("An error occurred while fetching post data.", "error");
   }
+  hideLoading();
 }
 
 // Save edited post function.

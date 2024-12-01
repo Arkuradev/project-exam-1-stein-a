@@ -20,6 +20,7 @@
     <link rel="stylesheet" href="./css/index.css" />
     <link rel="stylesheet" href="./media/sliderMedia.css" />
     <link rel="stylesheet" href="./css/slider.css" />
+    <link rel="stylesheet" href="./css/loadingSpinner.css" />
     <link
       rel="apple-touch-icon"
       sizes="180x180"
@@ -90,6 +91,10 @@
     </header>
     <main>
       <div id="error-container"></div>
+      <!-- Loading Indicator   -->
+      <div id="loading-indicator" class="loading hidden">
+        <div class="spinner"></div>
+      </div>
       <div id="slider-container">
         <button id="prev-btn" aria-label="Previous Slide">❮</button>
         <div id="slider-wrapper">
@@ -98,10 +103,6 @@
           </div>
         </div>
         <button id="next-btn" aria-label="Next Slide">❯</button>
-      </div>
-      <!-- Loading Indicator   -->
-      <div id="loading-indicator" class="loading hidden">
-        <div class="spinner"></div>
       </div>
 
       <div class="thumbnail-grid" id="blog-thumbnails"></div>
