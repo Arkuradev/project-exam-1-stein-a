@@ -2,6 +2,8 @@
 
 Welcome to GamerBlog, your ultimate tech and gaming blog platform! This project is designed to provide users with an intuitive interface to manage and interact with tech-related blog posts. Users can register, log in, create, edit, and delete their blog posts while enjoying a responsive and user-friendly experience.
 
+(![Gamerblog Screenshot](image.png))
+
 ## Table of Contents
 
 1. [Project Overview](#project-overview)
