@@ -31,24 +31,24 @@ GamerBlog allows users to explore and manage gaming and tech-related content sea
 * User registration and login with token-based authentication.
 * Secure storage of credentials using localStorage.
 
-- User Management:
+### User Management:
 
-* Create, edit, and delete blog posts.
-* Manage posts from a personal admin panel.
+- Create, edit, and delete blog posts.
+- Manage posts from a personal admin panel.
 
-- Blog Feed:
+### Blog Feed:
 
-* Display the latest 12 posts dynamically.
-* View individual blog posts with detailed content.
+- Display the latest 12 posts dynamically.
+- View individual blog posts with detailed content.
 
-- Responsive Design:
+### Responsive Design:
 
-* Optimized for all screen sizes.
+- Optimized for all screen sizes.
 
-- Error Handling:
+### Error Handling:
 
-* Informative error messages for all interactions.
-* Loading indicators for API interactions.
+- Informative error messages for all interactions.
+- Loading indicators for API interactions.
 
 ## Technologies Used
 
@@ -74,9 +74,13 @@ GamerBlog allows users to explore and manage gaming and tech-related content sea
 
 - Navigate to the "New Post" page via the manage panel.
 - Fill in the form and click submit.
-  3 ### Edit/Delete Posts:
+
+3. ### Edit/Delete Posts:
+
 - Access the manage panel to edit or delete your posts.
-  4 ### Explore Posts:
+
+4. ### Explore Posts:
+
 - Browse the homepage for the latest posts or go to "Blog" page to see all posts.
 
 ## API Endpoints
