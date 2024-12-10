@@ -31,10 +31,10 @@ GamerBlog allows users to explore and manage gaming and tech-related content sea
 
 ## Features
 
-- Authentication:
+### Authentication:
 
-* User registration and login with token-based authentication.
-* Secure storage of credentials using localStorage.
+- User registration and login with token-based authentication.
+- Secure storage of credentials using localStorage.
 
 ### User Management:
 
